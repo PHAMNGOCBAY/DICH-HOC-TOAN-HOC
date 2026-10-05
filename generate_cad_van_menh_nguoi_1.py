@@ -25,10 +25,13 @@ def setup_dxf_document():
     doc.layers.add("SAN_CAT", color=3)    # Xanh lá cây (Cát)
     doc.layers.add("SAN_HUNG", color=1)   # Đỏ (Hung)
     doc.layers.add("HAO_DUONG", color=1)  # Đỏ
-    doc.layers.add("HAO_AM", color=5)     # Xanh dương
+    layer_am = doc.layers.add("HAO_AM", color=2)  # Màu vàng (Yellow - AutoCAD ACI 2)
+    layer_am.rgb = (217, 119, 6)                  # Tông màu vàng kỹ thuật sắc nét trên nền trắng
     doc.layers.add("CHU_THICH", color=7)
     doc.layers.add("TIEU_DE", color=7)
     return doc
+
+from ezdxf.addons.drawing.config import Configuration, BackgroundPolicy, ColorPolicy
 
 def export_dxf_to_png(doc, dxf_path, png_path, dpi=300):
     doc.saveas(dxf_path)
@@ -36,8 +39,9 @@ def export_dxf_to_png(doc, dxf_path, png_path, dpi=300):
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set_facecolor('#FFFFFF')
     ctx = RenderContext(doc)
+    cfg = Configuration(background_policy=BackgroundPolicy.WHITE, color_policy=ColorPolicy.COLOR_SWAP_BW)
     out = MatplotlibBackend(ax)
-    Frontend(ctx, out).draw_layout(doc.modelspace(), finalize=True)
+    Frontend(ctx, out, config=cfg).draw_layout(doc.modelspace(), finalize=True)
     fig.savefig(png_path, dpi=dpi, facecolor='#FFFFFF', edgecolor='none')
     plt.close(fig)
     print(f"  [Đã xuất Bản vẽ Vận mệnh Người 1] {os.path.basename(png_path)} ({os.path.getsize(png_path):,} bytes)")
@@ -95,7 +99,7 @@ def draw_van_menh_nguoi_1():
     # Hào 1 (Sơ): Âm (-1) (hai đoạn đứt)
     msp.add_line((-130, -32), (-115, -32), dxfattribs={"layer": "HAO_AM", "lineweight": 45})
     msp.add_line((-110, -32), (-95, -32), dxfattribs={"layer": "HAO_AM", "lineweight": 45})
-    msp.add_text("Hào 1 (Sơ): Âm (-1) - Tiền vận cần tích lũy", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.4}).set_placement((-90, -33.5))
+    msp.add_text("Hào 1 (Sơ): Âm (-1) - Tiền vận cần tích lũy", dxfattribs={"layer": "HAO_AM", "style": "VN_BOLD", "height": 3.4}).set_placement((-90, -33.5))
     
     msp.add_text("Công thức năng lượng: E = (-1) + (+3) + (+5) = +7", dxfattribs={"layer": "SAN_CAT", "style": "VN_BOLD", "height": 3.8}).set_placement((-135, -44))
 
@@ -185,17 +189,17 @@ def draw_van_menh_nguoi_1():
         box_h = 24.0
         
         # Khung đại vận
-        msp.add_line((x_cursor, box_y), (x_cursor + block_w, box_y), dxfattribs={"layer": "KHUNG", "lineweight": 18})
-        msp.add_line((x_cursor + block_w, box_y), (x_cursor + block_w, box_y - box_h), dxfattribs={"layer": "KHUNG", "lineweight": 18})
-        msp.add_line((x_cursor + block_w, box_y - box_h), (x_cursor, box_y - box_h), dxfattribs={"layer": "KHUNG", "lineweight": 18})
-        msp.add_line((x_cursor, box_y - box_h), (x_cursor, box_y), dxfattribs={"layer": "KHUNG", "lineweight": 18})
+        box_layer = "HAO_DUONG" if is_yang else "HAO_AM"
+        msp.add_line((x_cursor, box_y), (x_cursor + block_w, box_y), dxfattribs={"layer": box_layer, "lineweight": 22})
+        msp.add_line((x_cursor + block_w, box_y), (x_cursor + block_w, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 22})
+        msp.add_line((x_cursor + block_w, box_y - box_h), (x_cursor, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 22})
+        msp.add_line((x_cursor, box_y - box_h), (x_cursor, box_y), dxfattribs={"layer": box_layer, "lineweight": 22})
         
         # Nhãn đại vận
-        layer_van = "HAO_DUONG" if is_yang else "HAO_AM"
-        msp.add_text(f"{dur} năm", dxfattribs={"layer": layer_van, "style": "VN_BOLD", "height": 3.8}).set_placement((x_cursor + 2, box_y - 6))
+        msp.add_text(f"{dur} năm", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 3.8}).set_placement((x_cursor + 2, box_y - 6))
         msp.add_text(f"{a1}-{a2} tuổi", dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 3.0}).set_placement((x_cursor + 2, box_y - 12))
         msp.add_text(y_range, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.6}).set_placement((x_cursor + 2, box_y - 17))
-        msp.add_text("Dương (+)" if is_yang else "Âm (-)", dxfattribs={"layer": layer_van, "style": "VN_BOLD", "height": 2.6}).set_placement((x_cursor + 2, box_y - 21))
+        msp.add_text("Dương (+)" if is_yang else "Âm (-)", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 2.6}).set_placement((x_cursor + 2, box_y - 21))
         
         x_cursor += block_w + 3.0
         
