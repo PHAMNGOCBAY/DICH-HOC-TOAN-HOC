@@ -1,0 +1,1540 @@
+{
+  "metadata": {
+    "tac_pham": "Dịch học diễn giải trên cơ sở toán học và ứng dụng vào đời sống",
+    "tac_gia": "TS. Nguyễn Thế Cường (Nguyễn Quý Thế Cường)",
+    "sinh_nam": 1942,
+    "hoc_vi": "Tiến sĩ Toán - Lý ĐH Tổng hợp Leningrad (1973)",
+    "nha_xuat_ban": "Đại học Quốc gia Thành phố Hồ Chí Minh",
+    "nam_xuat_ban": 2014,
+    "isbn": "978-604-73-2149-0",
+    "tong_so_trang_pdf": 278,
+    "so_trang_sach_in": 261,
+    "nguyen_tac_bien_soan": "Không bịa đặt, không suy diễn, đối chiếu trực tiếp từ nguyên bản của tác giả"
+  },
+  "chuong_I_co_so_toan_hoc": {
+    "ten_chuong": "Cơ sở toán học của Bát quái",
+    "tap_hop_so": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "quan_he_modulo": "10 ≡ 0 (Đồng hồ 10 vạch chia)",
+    "phan_tu_trung_hoa": 0,
+    "cau_truc_dai_so": "Nhóm giao hoán Abel (Z/10Z, +)",
+    "cac_cap_so_doi": [
+      {
+        "a": 1,
+        "doi": 9
+      },
+      {
+        "a": 2,
+        "doi": 8
+      },
+      {
+        "a": 3,
+        "doi": 7
+      },
+      {
+        "a": 4,
+        "doi": 6
+      },
+      {
+        "a": 5,
+        "doi": 5
+      },
+      {
+        "a": 0,
+        "doi": 0
+      }
+    ]
+  },
+  "chuong_II_am_duong_hop_hoa": {
+    "ten_chuong": "Âm, dương và Thái cực",
+    "phan_loai_so": {
+      "duong": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "am": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "trung_hoa_thai_cuc": 0,
+      "so_dac_biet_5": "Chính giữa (Trung cung Lạc thư)"
+    },
+    "thien_can_ngu_hop": [
+      {
+        "can1": "Giáp",
+        "can2": "Kỷ",
+        "hoa_hanh": "Thổ"
+      },
+      {
+        "can1": "Ất",
+        "can2": "Canh",
+        "hoa_hanh": "Kim"
+      },
+      {
+        "can1": "Bính",
+        "can2": "Tân",
+        "hoa_hanh": "Thủy"
+      },
+      {
+        "can1": "Đinh",
+        "can2": "Nhâm",
+        "hoa_hanh": "Mộc"
+      },
+      {
+        "can1": "Mậu",
+        "can2": "Quý",
+        "hoa_hanh": "Hỏa"
+      }
+    ],
+    "dia_chi_luc_hop": [
+      {
+        "chi1": "Tý",
+        "chi2": "Sửu",
+        "hoa_hanh": "Thổ"
+      },
+      {
+        "chi1": "Dần",
+        "chi2": "Hợi",
+        "hoa_hanh": "Mộc"
+      },
+      {
+        "chi1": "Mão",
+        "chi2": "Tuất",
+        "hoa_hanh": "Hỏa"
+      },
+      {
+        "chi1": "Thìn",
+        "chi2": "Dậu",
+        "hoa_hanh": "Kim"
+      },
+      {
+        "chi1": "Tị",
+        "chi2": "Thân",
+        "hoa_hanh": "Thủy"
+      },
+      {
+        "chi1": "Ngọ",
+        "chi2": "Mùi",
+        "hoa_hanh": "Thái Dương / Thái Âm"
+      }
+    ],
+    "dia_chi_tam_hop": [
+      {
+        "tam_hop": [
+          "Thân",
+          "Tý",
+          "Thìn"
+        ],
+        "cuc": "Thủy cục"
+      },
+      {
+        "tam_hop": [
+          "Hợi",
+          "Mão",
+          "Mùi"
+        ],
+        "cuc": "Mộc cục"
+      },
+      {
+        "tam_hop": [
+          "Dần",
+          "Ngọ",
+          "Tuất"
+        ],
+        "cuc": "Hỏa cục"
+      },
+      {
+        "tam_hop": [
+          "Tị",
+          "Dậu",
+          "Sửu"
+        ],
+        "cuc": "Kim cục"
+      }
+    ]
+  },
+  "chuong_III_nang_luong_quai": {
+    "ten_chuong": "Tạo quái từ lưỡng nghi âm, dương",
+    "cong_thuc_nang_luong": "E = h1*(±1) + h2*(±3) + h3*(±5)",
+    "trong_so_hao": {
+      "hao_1_so": 1,
+      "hao_2_trung": 3,
+      "hao_3_thuong": 5
+    },
+    "tu_tuong": {
+      "Thai_Duong": {
+        "lines": [
+          1,
+          1
+        ],
+        "tri_so": 4
+      },
+      "Thieu_Am": {
+        "lines": [
+          1,
+          0
+        ],
+        "tri_so": -2
+      },
+      "Thieu_Duong": {
+        "lines": [
+          0,
+          1
+        ],
+        "tri_so": 2
+      },
+      "Thai_Am": {
+        "lines": [
+          0,
+          0
+        ],
+        "tri_so": -4
+      }
+    }
+  },
+  "chuong_IV_bat_quai_tan_thien": {
+    "ten_chuong": "Bát quái Tân thiên",
+    "danh_sach_quai": {
+      "Càn": {
+        "lines": [
+          1,
+          1,
+          1
+        ],
+        "tri_so": 9,
+        "so_gan": 9,
+        "cung_lac_thu": 9,
+        "phuong_vi": "Chính Nam",
+        "tinh_chat": "Dương",
+        "doi_xung": true,
+        "cap_phu_the": "Đoài",
+        "ngu_hanh": "Kim"
+      },
+      "Đoài": {
+        "lines": [
+          1,
+          1,
+          0
+        ],
+        "tri_so": -1,
+        "so_gan": 8,
+        "cung_lac_thu": 8,
+        "phuong_vi": "Đông Bắc",
+        "tinh_chat": "Âm",
+        "doi_xung": false,
+        "cap_phu_the": "Càn",
+        "ngu_hanh": "Kim"
+      },
+      "Li": {
+        "lines": [
+          1,
+          0,
+          1
+        ],
+        "tri_so": 3,
+        "so_gan": 3,
+        "cung_lac_thu": 3,
+        "phuong_vi": "Chính Đông",
+        "tinh_chat": "Dương",
+        "doi_xung": true,
+        "cap_phu_the": "Chấn",
+        "ngu_hanh": "Hỏa"
+      },
+      "Chấn": {
+        "lines": [
+          1,
+          0,
+          0
+        ],
+        "tri_so": -7,
+        "so_gan": 6,
+        "cung_lac_thu": 6,
+        "phuong_vi": "Tây Bắc",
+        "tinh_chat": "Âm",
+        "doi_xung": false,
+        "cap_phu_the": "Li",
+        "ngu_hanh": "Mộc"
+      },
+      "Tốn": {
+        "lines": [
+          0,
+          1,
+          1
+        ],
+        "tri_so": 7,
+        "so_gan": 4,
+        "cung_lac_thu": 4,
+        "phuong_vi": "Đông Nam",
+        "tinh_chat": "Dương",
+        "doi_xung": false,
+        "cap_phu_the": "Khảm",
+        "ngu_hanh": "Mộc"
+      },
+      "Khảm": {
+        "lines": [
+          0,
+          1,
+          0
+        ],
+        "tri_so": -3,
+        "so_gan": 7,
+        "cung_lac_thu": 7,
+        "phuong_vi": "Chính Tây",
+        "tinh_chat": "Âm",
+        "doi_xung": true,
+        "cap_phu_the": "Tốn",
+        "ngu_hanh": "Thủy"
+      },
+      "Cấn": {
+        "lines": [
+          0,
+          0,
+          1
+        ],
+        "tri_so": 1,
+        "so_gan": 2,
+        "cung_lac_thu": 2,
+        "phuong_vi": "Tây Nam",
+        "tinh_chat": "Dương",
+        "doi_xung": false,
+        "cap_phu_the": "Khôn",
+        "ngu_hanh": "Thổ"
+      },
+      "Khôn": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "tri_so": -9,
+        "so_gan": 1,
+        "cung_lac_thu": 1,
+        "phuong_vi": "Chính Bắc",
+        "tinh_chat": "Âm",
+        "doi_xung": true,
+        "cap_phu_the": "Cấn",
+        "ngu_hanh": "Thổ"
+      }
+    },
+    "lac_thu_to_trigram": {
+      "1": "Khôn",
+      "2": "Cấn",
+      "3": "Li",
+      "4": "Tốn",
+      "6": "Chấn",
+      "7": "Khảm",
+      "8": "Đoài",
+      "9": "Càn"
+    }
+  },
+  "chuong_VI_ung_dung_bat_san": {
+    "ten_chuong": "Ứng dụng đồ tổng hợp QCC vào đời sống cá nhân và gia đình",
+    "dong_tu_trach": [
+      "Khảm",
+      "Li",
+      "Chấn",
+      "Tốn"
+    ],
+    "tay_tu_trach": [
+      "Càn",
+      "Khôn",
+      "Cấn",
+      "Đoài"
+    ],
+    "phan_loai_san": {
+      "cat": [
+        "Sinh khí",
+        "Thiên y",
+        "Diên niên",
+        "Phục vị"
+      ],
+      "hung": [
+        "Tuyệt mệnh",
+        "Ngũ quỷ",
+        "Lục sát",
+        "Họa hại"
+      ]
+    },
+    "ma_tran_bat_san": {
+      "Càn": {
+        "Càn": "Phục vị",
+        "Đoài": "Sinh khí",
+        "Khôn": "Diên niên",
+        "Cấn": "Thiên y",
+        "Li": "Tuyệt mệnh",
+        "Chấn": "Ngũ quỷ",
+        "Khảm": "Lục sát",
+        "Tốn": "Họa hại"
+      },
+      "Đoài": {
+        "Càn": "Sinh khí",
+        "Đoài": "Phục vị",
+        "Khôn": "Thiên y",
+        "Cấn": "Diên niên",
+        "Li": "Ngũ quỷ",
+        "Chấn": "Tuyệt mệnh",
+        "Khảm": "Họa hại",
+        "Tốn": "Lục sát"
+      },
+      "Khôn": {
+        "Càn": "Diên niên",
+        "Đoài": "Thiên y",
+        "Khôn": "Phục vị",
+        "Cấn": "Sinh khí",
+        "Li": "Lục sát",
+        "Chấn": "Họa hại",
+        "Khảm": "Tuyệt mệnh",
+        "Tốn": "Ngũ quỷ"
+      },
+      "Cấn": {
+        "Càn": "Thiên y",
+        "Đoài": "Diên niên",
+        "Khôn": "Sinh khí",
+        "Cấn": "Phục vị",
+        "Li": "Họa hại",
+        "Chấn": "Lục sát",
+        "Khảm": "Ngũ quỷ",
+        "Tốn": "Tuyệt mệnh"
+      },
+      "Li": {
+        "Càn": "Tuyệt mệnh",
+        "Đoài": "Ngũ quỷ",
+        "Khôn": "Lục sát",
+        "Cấn": "Họa hại",
+        "Li": "Phục vị",
+        "Chấn": "Sinh khí",
+        "Khảm": "Diên niên",
+        "Tốn": "Thiên y"
+      },
+      "Chấn": {
+        "Càn": "Ngũ quỷ",
+        "Đoài": "Tuyệt mệnh",
+        "Khôn": "Họa hại",
+        "Cấn": "Lục sát",
+        "Li": "Sinh khí",
+        "Chấn": "Phục vị",
+        "Khảm": "Thiên y",
+        "Tốn": "Diên niên"
+      },
+      "Khảm": {
+        "Càn": "Lục sát",
+        "Đoài": "Họa hại",
+        "Khôn": "Tuyệt mệnh",
+        "Cấn": "Ngũ quỷ",
+        "Li": "Diên niên",
+        "Chấn": "Thiên y",
+        "Khảm": "Phục vị",
+        "Tốn": "Sinh khí"
+      },
+      "Tốn": {
+        "Càn": "Họa hại",
+        "Đoài": "Lục sát",
+        "Khôn": "Ngũ quỷ",
+        "Cấn": "Tuyệt mệnh",
+        "Li": "Thiên y",
+        "Chấn": "Diên niên",
+        "Khảm": "Sinh khí",
+        "Tốn": "Phục vị"
+      }
+    }
+  },
+  "chuong_VII_que_dich_64": {
+    "ten_chuong": "Quẻ dịch và Nạp giáp",
+    "danh_sach_64_que": [
+      {
+        "stt": 1,
+        "ten_que": "Bát thuần Càn",
+        "quai_thuong": "Càn",
+        "quai_duoi": "Càn",
+        "ma_nhi_phan": "111111",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 2,
+        "ten_que": "Thiên địa Bĩ",
+        "quai_thuong": "Càn",
+        "quai_duoi": "Khôn",
+        "ma_nhi_phan": "000111",
+        "nap_chi_6_hao": [
+          "Mùi",
+          "Tị",
+          "Mão",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 3,
+        "ten_que": "Thiên hỏa Đồng nhân",
+        "quai_thuong": "Càn",
+        "quai_duoi": "Li",
+        "ma_nhi_phan": "101111",
+        "nap_chi_6_hao": [
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 4,
+        "ten_que": "Thiên thủy Tụng",
+        "quai_thuong": "Càn",
+        "quai_duoi": "Khảm",
+        "ma_nhi_phan": "010111",
+        "nap_chi_6_hao": [
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 5,
+        "ten_que": "Thiên phong Cấu",
+        "quai_thuong": "Càn",
+        "quai_duoi": "Tốn",
+        "ma_nhi_phan": "011111",
+        "nap_chi_6_hao": [
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 6,
+        "ten_que": "Thiên lôi Vô vọng",
+        "quai_thuong": "Càn",
+        "quai_duoi": "Chấn",
+        "ma_nhi_phan": "100111",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 7,
+        "ten_que": "Thiên sơn Độn",
+        "quai_thuong": "Càn",
+        "quai_duoi": "Cấn",
+        "ma_nhi_phan": "001111",
+        "nap_chi_6_hao": [
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 8,
+        "ten_que": "Thiên trạch Lý",
+        "quai_thuong": "Càn",
+        "quai_duoi": "Đoài",
+        "ma_nhi_phan": "110111",
+        "nap_chi_6_hao": [
+          "Tị",
+          "Mão",
+          "Sửu",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 9,
+        "ten_que": "Địa thiên Thái",
+        "quai_thuong": "Khôn",
+        "quai_duoi": "Càn",
+        "ma_nhi_phan": "111000",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Sửu",
+          "Hợi",
+          "Dậu"
+        ]
+      },
+      {
+        "stt": 10,
+        "ten_que": "Bát thuần Khôn",
+        "quai_thuong": "Khôn",
+        "quai_duoi": "Khôn",
+        "ma_nhi_phan": "000000",
+        "nap_chi_6_hao": [
+          "Mùi",
+          "Tị",
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Dậu"
+        ]
+      },
+      {
+        "stt": 11,
+        "ten_que": "Địa hỏa Minh di",
+        "quai_thuong": "Khôn",
+        "quai_duoi": "Li",
+        "ma_nhi_phan": "101000",
+        "nap_chi_6_hao": [
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Sửu",
+          "Hợi",
+          "Dậu"
+        ]
+      },
+      {
+        "stt": 12,
+        "ten_que": "Địa thủy Sư",
+        "quai_thuong": "Khôn",
+        "quai_duoi": "Khảm",
+        "ma_nhi_phan": "010000",
+        "nap_chi_6_hao": [
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Sửu",
+          "Hợi",
+          "Dậu"
+        ]
+      },
+      {
+        "stt": 13,
+        "ten_que": "Địa phong Thăng",
+        "quai_thuong": "Khôn",
+        "quai_duoi": "Tốn",
+        "ma_nhi_phan": "011000",
+        "nap_chi_6_hao": [
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Sửu",
+          "Hợi",
+          "Dậu"
+        ]
+      },
+      {
+        "stt": 14,
+        "ten_que": "Địa lôi Phục",
+        "quai_thuong": "Khôn",
+        "quai_duoi": "Chấn",
+        "ma_nhi_phan": "100000",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Sửu",
+          "Hợi",
+          "Dậu"
+        ]
+      },
+      {
+        "stt": 15,
+        "ten_que": "Địa sơn Khiêm",
+        "quai_thuong": "Khôn",
+        "quai_duoi": "Cấn",
+        "ma_nhi_phan": "001000",
+        "nap_chi_6_hao": [
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Sửu",
+          "Hợi",
+          "Dậu"
+        ]
+      },
+      {
+        "stt": 16,
+        "ten_que": "Địa trạch Lâm",
+        "quai_thuong": "Khôn",
+        "quai_duoi": "Đoài",
+        "ma_nhi_phan": "110000",
+        "nap_chi_6_hao": [
+          "Tị",
+          "Mão",
+          "Sửu",
+          "Sửu",
+          "Hợi",
+          "Dậu"
+        ]
+      },
+      {
+        "stt": 17,
+        "ten_que": "Phong thiên Tiểu súc",
+        "quai_thuong": "Tốn",
+        "quai_duoi": "Càn",
+        "ma_nhi_phan": "111011",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Mùi",
+          "Tị",
+          "Mão"
+        ]
+      },
+      {
+        "stt": 18,
+        "ten_que": "Phong địa Quán",
+        "quai_thuong": "Tốn",
+        "quai_duoi": "Khôn",
+        "ma_nhi_phan": "000011",
+        "nap_chi_6_hao": [
+          "Mùi",
+          "Tị",
+          "Mão",
+          "Mùi",
+          "Tị",
+          "Mão"
+        ]
+      },
+      {
+        "stt": 19,
+        "ten_que": "Phong hỏa Gia nhân",
+        "quai_thuong": "Tốn",
+        "quai_duoi": "Li",
+        "ma_nhi_phan": "101011",
+        "nap_chi_6_hao": [
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Mùi",
+          "Tị",
+          "Mão"
+        ]
+      },
+      {
+        "stt": 20,
+        "ten_que": "Phong thủy Hoán",
+        "quai_thuong": "Tốn",
+        "quai_duoi": "Khảm",
+        "ma_nhi_phan": "010011",
+        "nap_chi_6_hao": [
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Mùi",
+          "Tị",
+          "Mão"
+        ]
+      },
+      {
+        "stt": 21,
+        "ten_que": "Bát thuần Tốn",
+        "quai_thuong": "Tốn",
+        "quai_duoi": "Tốn",
+        "ma_nhi_phan": "011011",
+        "nap_chi_6_hao": [
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Mùi",
+          "Tị",
+          "Mão"
+        ]
+      },
+      {
+        "stt": 22,
+        "ten_que": "Phong lôi Ích",
+        "quai_thuong": "Tốn",
+        "quai_duoi": "Chấn",
+        "ma_nhi_phan": "100011",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Mùi",
+          "Tị",
+          "Mão"
+        ]
+      },
+      {
+        "stt": 23,
+        "ten_que": "Phong sơn Tiệm",
+        "quai_thuong": "Tốn",
+        "quai_duoi": "Cấn",
+        "ma_nhi_phan": "001011",
+        "nap_chi_6_hao": [
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Mùi",
+          "Tị",
+          "Mão"
+        ]
+      },
+      {
+        "stt": 24,
+        "ten_que": "Phong trạch Trung phu",
+        "quai_thuong": "Tốn",
+        "quai_duoi": "Đoài",
+        "ma_nhi_phan": "110011",
+        "nap_chi_6_hao": [
+          "Tị",
+          "Mão",
+          "Sửu",
+          "Mùi",
+          "Tị",
+          "Mão"
+        ]
+      },
+      {
+        "stt": 25,
+        "ten_que": "Lôi thiên Đại tráng",
+        "quai_thuong": "Chấn",
+        "quai_duoi": "Càn",
+        "ma_nhi_phan": "111100",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 26,
+        "ten_que": "Lôi địa Dự",
+        "quai_thuong": "Chấn",
+        "quai_duoi": "Khôn",
+        "ma_nhi_phan": "000100",
+        "nap_chi_6_hao": [
+          "Mùi",
+          "Tị",
+          "Mão",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 27,
+        "ten_que": "Lôi hỏa Phong",
+        "quai_thuong": "Chấn",
+        "quai_duoi": "Li",
+        "ma_nhi_phan": "101100",
+        "nap_chi_6_hao": [
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 28,
+        "ten_que": "Lôi thủy Giải",
+        "quai_thuong": "Chấn",
+        "quai_duoi": "Khảm",
+        "ma_nhi_phan": "010100",
+        "nap_chi_6_hao": [
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 29,
+        "ten_que": "Lôi phong Hằng",
+        "quai_thuong": "Chấn",
+        "quai_duoi": "Tốn",
+        "ma_nhi_phan": "011100",
+        "nap_chi_6_hao": [
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 30,
+        "ten_que": "Bát thuần Chấn",
+        "quai_thuong": "Chấn",
+        "quai_duoi": "Chấn",
+        "ma_nhi_phan": "100100",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 31,
+        "ten_que": "Lôi sơn Tiểu quá",
+        "quai_thuong": "Chấn",
+        "quai_duoi": "Cấn",
+        "ma_nhi_phan": "001100",
+        "nap_chi_6_hao": [
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 32,
+        "ten_que": "Lôi trạch Quy muội",
+        "quai_thuong": "Chấn",
+        "quai_duoi": "Đoài",
+        "ma_nhi_phan": "110100",
+        "nap_chi_6_hao": [
+          "Tị",
+          "Mão",
+          "Sửu",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ]
+      },
+      {
+        "stt": 33,
+        "ten_que": "Hỏa thiên Đại hữu",
+        "quai_thuong": "Li",
+        "quai_duoi": "Càn",
+        "ma_nhi_phan": "111101",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Dậu",
+          "Mùi",
+          "Tị"
+        ]
+      },
+      {
+        "stt": 34,
+        "ten_que": "Hỏa địa Tấn",
+        "quai_thuong": "Li",
+        "quai_duoi": "Khôn",
+        "ma_nhi_phan": "000101",
+        "nap_chi_6_hao": [
+          "Mùi",
+          "Tị",
+          "Mão",
+          "Dậu",
+          "Mùi",
+          "Tị"
+        ]
+      },
+      {
+        "stt": 35,
+        "ten_que": "Bát thuần Li",
+        "quai_thuong": "Li",
+        "quai_duoi": "Li",
+        "ma_nhi_phan": "101101",
+        "nap_chi_6_hao": [
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Mùi",
+          "Tị"
+        ]
+      },
+      {
+        "stt": 36,
+        "ten_que": "Hỏa thủy Vị tế",
+        "quai_thuong": "Li",
+        "quai_duoi": "Khảm",
+        "ma_nhi_phan": "010101",
+        "nap_chi_6_hao": [
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Dậu",
+          "Mùi",
+          "Tị"
+        ]
+      },
+      {
+        "stt": 37,
+        "ten_que": "Hỏa phong Đỉnh",
+        "quai_thuong": "Li",
+        "quai_duoi": "Tốn",
+        "ma_nhi_phan": "011101",
+        "nap_chi_6_hao": [
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Dậu",
+          "Mùi",
+          "Tị"
+        ]
+      },
+      {
+        "stt": 38,
+        "ten_que": "Hỏa lôi Phệ hạp",
+        "quai_thuong": "Li",
+        "quai_duoi": "Chấn",
+        "ma_nhi_phan": "100101",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Dậu",
+          "Mùi",
+          "Tị"
+        ]
+      },
+      {
+        "stt": 39,
+        "ten_que": "Hỏa sơn Lữ",
+        "quai_thuong": "Li",
+        "quai_duoi": "Cấn",
+        "ma_nhi_phan": "001101",
+        "nap_chi_6_hao": [
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Dậu",
+          "Mùi",
+          "Tị"
+        ]
+      },
+      {
+        "stt": 40,
+        "ten_que": "Hỏa trạch Khuê",
+        "quai_thuong": "Li",
+        "quai_duoi": "Đoài",
+        "ma_nhi_phan": "110101",
+        "nap_chi_6_hao": [
+          "Tị",
+          "Mão",
+          "Sửu",
+          "Dậu",
+          "Mùi",
+          "Tị"
+        ]
+      },
+      {
+        "stt": 41,
+        "ten_que": "Sơn thiên Đại súc",
+        "quai_thuong": "Cấn",
+        "quai_duoi": "Càn",
+        "ma_nhi_phan": "111001",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Tuất",
+          "Tý",
+          "Dần"
+        ]
+      },
+      {
+        "stt": 42,
+        "ten_que": "Sơn địa Bác",
+        "quai_thuong": "Cấn",
+        "quai_duoi": "Khôn",
+        "ma_nhi_phan": "000001",
+        "nap_chi_6_hao": [
+          "Mùi",
+          "Tị",
+          "Mão",
+          "Tuất",
+          "Tý",
+          "Dần"
+        ]
+      },
+      {
+        "stt": 43,
+        "ten_que": "Sơn hỏa Bí",
+        "quai_thuong": "Cấn",
+        "quai_duoi": "Li",
+        "ma_nhi_phan": "101001",
+        "nap_chi_6_hao": [
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Tuất",
+          "Tý",
+          "Dần"
+        ]
+      },
+      {
+        "stt": 44,
+        "ten_que": "Sơn thủy Mông",
+        "quai_thuong": "Cấn",
+        "quai_duoi": "Khảm",
+        "ma_nhi_phan": "010001",
+        "nap_chi_6_hao": [
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Tuất",
+          "Tý",
+          "Dần"
+        ]
+      },
+      {
+        "stt": 45,
+        "ten_que": "Sơn phong Cổ",
+        "quai_thuong": "Cấn",
+        "quai_duoi": "Tốn",
+        "ma_nhi_phan": "011001",
+        "nap_chi_6_hao": [
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Tuất",
+          "Tý",
+          "Dần"
+        ]
+      },
+      {
+        "stt": 46,
+        "ten_que": "Sơn lôi Di",
+        "quai_thuong": "Cấn",
+        "quai_duoi": "Chấn",
+        "ma_nhi_phan": "100001",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Tuất",
+          "Tý",
+          "Dần"
+        ]
+      },
+      {
+        "stt": 47,
+        "ten_que": "Bát thuần Cấn",
+        "quai_thuong": "Cấn",
+        "quai_duoi": "Cấn",
+        "ma_nhi_phan": "001001",
+        "nap_chi_6_hao": [
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Tuất",
+          "Tý",
+          "Dần"
+        ]
+      },
+      {
+        "stt": 48,
+        "ten_que": "Sơn trạch Tổn",
+        "quai_thuong": "Cấn",
+        "quai_duoi": "Đoài",
+        "ma_nhi_phan": "110001",
+        "nap_chi_6_hao": [
+          "Tị",
+          "Mão",
+          "Sửu",
+          "Tuất",
+          "Tý",
+          "Dần"
+        ]
+      },
+      {
+        "stt": 49,
+        "ten_que": "Thủy thiên Nhu",
+        "quai_thuong": "Khảm",
+        "quai_duoi": "Càn",
+        "ma_nhi_phan": "111010",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Thân",
+          "Tuất",
+          "Tý"
+        ]
+      },
+      {
+        "stt": 50,
+        "ten_que": "Thủy địa Tỉ",
+        "quai_thuong": "Khảm",
+        "quai_duoi": "Khôn",
+        "ma_nhi_phan": "000010",
+        "nap_chi_6_hao": [
+          "Mùi",
+          "Tị",
+          "Mão",
+          "Thân",
+          "Tuất",
+          "Tý"
+        ]
+      },
+      {
+        "stt": 51,
+        "ten_que": "Thủy hỏa Kí tế",
+        "quai_thuong": "Khảm",
+        "quai_duoi": "Li",
+        "ma_nhi_phan": "101010",
+        "nap_chi_6_hao": [
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Thân",
+          "Tuất",
+          "Tý"
+        ]
+      },
+      {
+        "stt": 52,
+        "ten_que": "Bát thuần Khảm",
+        "quai_thuong": "Khảm",
+        "quai_duoi": "Khảm",
+        "ma_nhi_phan": "010010",
+        "nap_chi_6_hao": [
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Tuất",
+          "Tý"
+        ]
+      },
+      {
+        "stt": 53,
+        "ten_que": "Thủy phong Tỉnh",
+        "quai_thuong": "Khảm",
+        "quai_duoi": "Tốn",
+        "ma_nhi_phan": "011010",
+        "nap_chi_6_hao": [
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Thân",
+          "Tuất",
+          "Tý"
+        ]
+      },
+      {
+        "stt": 54,
+        "ten_que": "Thủy lôi Truân",
+        "quai_thuong": "Khảm",
+        "quai_duoi": "Chấn",
+        "ma_nhi_phan": "100010",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Thân",
+          "Tuất",
+          "Tý"
+        ]
+      },
+      {
+        "stt": 55,
+        "ten_que": "Thủy sơn Kiển",
+        "quai_thuong": "Khảm",
+        "quai_duoi": "Cấn",
+        "ma_nhi_phan": "001010",
+        "nap_chi_6_hao": [
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Thân",
+          "Tuất",
+          "Tý"
+        ]
+      },
+      {
+        "stt": 56,
+        "ten_que": "Thủy trạch Tiết",
+        "quai_thuong": "Khảm",
+        "quai_duoi": "Đoài",
+        "ma_nhi_phan": "110010",
+        "nap_chi_6_hao": [
+          "Tị",
+          "Mão",
+          "Sửu",
+          "Thân",
+          "Tuất",
+          "Tý"
+        ]
+      },
+      {
+        "stt": 57,
+        "ten_que": "Trạch thiên Quải",
+        "quai_thuong": "Đoài",
+        "quai_duoi": "Càn",
+        "ma_nhi_phan": "111110",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Hợi",
+          "Dậu",
+          "Mùi"
+        ]
+      },
+      {
+        "stt": 58,
+        "ten_que": "Trạch địa Tụy",
+        "quai_thuong": "Đoài",
+        "quai_duoi": "Khôn",
+        "ma_nhi_phan": "000110",
+        "nap_chi_6_hao": [
+          "Mùi",
+          "Tị",
+          "Mão",
+          "Hợi",
+          "Dậu",
+          "Mùi"
+        ]
+      },
+      {
+        "stt": 59,
+        "ten_que": "Trạch hỏa Cách",
+        "quai_thuong": "Đoài",
+        "quai_duoi": "Li",
+        "ma_nhi_phan": "101110",
+        "nap_chi_6_hao": [
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Hợi",
+          "Dậu",
+          "Mùi"
+        ]
+      },
+      {
+        "stt": 60,
+        "ten_que": "Trạch thủy Khốn",
+        "quai_thuong": "Đoài",
+        "quai_duoi": "Khảm",
+        "ma_nhi_phan": "010110",
+        "nap_chi_6_hao": [
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Hợi",
+          "Dậu",
+          "Mùi"
+        ]
+      },
+      {
+        "stt": 61,
+        "ten_que": "Trạch phong Đại quá",
+        "quai_thuong": "Đoài",
+        "quai_duoi": "Tốn",
+        "ma_nhi_phan": "011110",
+        "nap_chi_6_hao": [
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Hợi",
+          "Dậu",
+          "Mùi"
+        ]
+      },
+      {
+        "stt": 62,
+        "ten_que": "Trạch lôi Tùy",
+        "quai_thuong": "Đoài",
+        "quai_duoi": "Chấn",
+        "ma_nhi_phan": "100110",
+        "nap_chi_6_hao": [
+          "Tý",
+          "Dần",
+          "Thìn",
+          "Hợi",
+          "Dậu",
+          "Mùi"
+        ]
+      },
+      {
+        "stt": 63,
+        "ten_que": "Trạch sơn Hàm",
+        "quai_thuong": "Đoài",
+        "quai_duoi": "Cấn",
+        "ma_nhi_phan": "001110",
+        "nap_chi_6_hao": [
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Hợi",
+          "Dậu",
+          "Mùi"
+        ]
+      },
+      {
+        "stt": 64,
+        "ten_que": "Bát thuần Đoài",
+        "quai_thuong": "Đoài",
+        "quai_duoi": "Đoài",
+        "ma_nhi_phan": "110110",
+        "nap_chi_6_hao": [
+          "Tị",
+          "Mão",
+          "Sửu",
+          "Hợi",
+          "Dậu",
+          "Mùi"
+        ]
+      }
+    ]
+  },
+  "chuong_VIII_bat_tu_ha_lac": {
+    "ten_chuong": "Nhận dạng theo phương pháp Bát tự Hà – Lạc",
+    "ma_so_thien_can": {
+      "Kỷ": 1,
+      "Mậu": 2,
+      "Bính": 3,
+      "Đinh": 3,
+      "Giáp": 4,
+      "Ất": 6,
+      "Nhâm": 7,
+      "Quý": 7,
+      "Tân": 8,
+      "Canh": 9
+    },
+    "ma_so_dia_chi_duong_nam_am_nu": {
+      "Tý": [
+        9,
+        2
+      ],
+      "Hợi": [
+        9,
+        2
+      ],
+      "Ngọ": [
+        1,
+        8
+      ],
+      "Tị": [
+        1,
+        8
+      ],
+      "Mão": [
+        7,
+        6
+      ],
+      "Dần": [
+        7,
+        6
+      ],
+      "Dậu": [
+        3,
+        4
+      ],
+      "Thân": [
+        3,
+        4
+      ],
+      "Thìn": [
+        7,
+        7
+      ],
+      "Tuất": [
+        3,
+        3
+      ],
+      "Sửu": [
+        9,
+        9
+      ],
+      "Mùi": [
+        1,
+        1
+      ]
+    },
+    "ma_so_dia_chi_am_nam_duong_nu": {
+      "Tý": [
+        7,
+        4
+      ],
+      "Hợi": [
+        7,
+        4
+      ],
+      "Ngọ": [
+        3,
+        6
+      ],
+      "Tị": [
+        3,
+        6
+      ],
+      "Mão": [
+        4,
+        9
+      ],
+      "Dần": [
+        4,
+        9
+      ],
+      "Dậu": [
+        6,
+        1
+      ],
+      "Thân": [
+        6,
+        1
+      ],
+      "Thìn": [
+        3,
+        1
+      ],
+      "Tuất": [
+        7,
+        9
+      ],
+      "Sửu": [
+        2,
+        6
+      ],
+      "Mùi": [
+        8,
+        4
+      ]
+    },
+    "quy_tac_chia_dai_van": {
+      "hao_duong": 9,
+      "hao_am": 6,
+      "tong_so_dai_van": 6
+    }
+  }
+}
