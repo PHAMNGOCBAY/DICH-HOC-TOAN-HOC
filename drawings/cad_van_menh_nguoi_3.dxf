@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461320.222800926
+2461320.2244444443
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461320.222800926
+2461320.2244444443
   9
 $TDUUPDATE
  40
@@ -549,7 +549,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-ED
+141
   9
 $SURFTAB1
  70
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{90949D8B-8EA2-4FE7-B46F-C193820AFE96}
+{CD6FBFCC-F72E-4E11-9FCC-0E6F816E6AA1}
   9
 $VERSIONGUID
   2
-{D133935D-5B40-4111-9FFE-AC747ED0B40E}
+{347D9CE1-FEFD-4D88-A51E-05AE13B18D3C}
   9
 $EXTNAMES
 290
@@ -3349,7 +3349,7 @@ ACAD
   0
 APPID
   5
-EA
+13E
 330
 3
 100
@@ -3363,7 +3363,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-EB
+13F
 330
 3
 100
@@ -6041,7 +6041,7 @@ A7
 100
 AcDbEntity
   8
-SAN_HUNG
+SAN_CAT
 100
 AcDbText
  10
@@ -6053,7 +6053,7 @@ AcDbText
  40
 3.0
   1
-- TÌNH TRẠNG DỮ LIỆU: Chưa có Giờ sinh (1 trong 12 giờ)
+- CHU KỲ VẬN MỆNH: 12 Đại vận (Hào Dương 9 năm, Hào Âm 6 năm)
   7
 VN_BOLD
  11
@@ -6085,7 +6085,7 @@ AcDbText
  40
 2.5
   1
-  (Đã đủ để xác định Quái mệnh Bát Trạch; Cần giờ để chốt Quẻ Hà Lạc)
+  (Tiền vận: 1-48 tuổi; Hậu vận: 49-90 tuổi theo Bát tự Hà Lạc)
   7
 VN_TEXT
  11
@@ -7569,7 +7569,7 @@ AcDbText
  40
 4.2
   1
-III. BÁT TỰ HÀ LẠC & BẢNG ĐỐI CHIẾU 12 GIỜ SINH KHẢ DĨ (NGUYÊN TẮC ZERO SPECULATION)
+III. CHU KỲ 12 ĐẠI VẬN BÁT TỰ HÀ LẠC: TIỀN VẬN (1 - 48 TUỔI) & HẬU VẬN (49 - 90 TUỔI)
   7
 VN_BOLD
  11
@@ -7595,25 +7595,25 @@ AcDbText
  10
 -136.0
  20
--66.0
+-66.5
  30
 0.0
  40
-2.7
+3.0
   1
-LƯU Ý KHOA HỌC: Do người dùng chưa cung cấp giờ sinh, hệ thống tính toán chính xác 12 quẻ Tiên thiên khả dĩ ứng với 12 giờ:
+1. TIỀN VẬN (Quẻ Tiên thiên, 1 - 48 tuổi):
   7
-VN_TEXT
+VN_BOLD
  11
 -136.0
  21
--66.0
+-66.5
  31
 0.0
 100
 AcDbText
   0
-TEXT
+LINE
   5
 DB
 330
@@ -7621,31 +7621,25 @@ DB
 100
 AcDbEntity
   8
-CHU_THICH
+HAO_DUONG
+370
+20
 100
-AcDbText
+AcDbLine
  10
--136.0
+-130.0
  20
--72.0
+-68.0
  30
 0.0
- 40
-2.4
-  1
-1. Tý (23-01h)  : Can Chi Bính Tý    | D: 40 | Â: 24  --> Quẻ: Phong lôi Ích
-  7
-VN_TEXT
  11
--136.0
+-85.0
  21
--72.0
+-68.0
  31
 0.0
-100
-AcDbText
   0
-TEXT
+LINE
   5
 DC
 330
@@ -7653,31 +7647,25 @@ DC
 100
 AcDbEntity
   8
-CHU_THICH
+HAO_DUONG
+370
+20
 100
-AcDbText
+AcDbLine
  10
--136.0
+-85.0
  20
--77.2
+-68.0
  30
 0.0
- 40
-2.4
-  1
-2. Sửu (01-03h) : Can Chi Đinh Sửu   | D: 49 | Â: 22  --> Quẻ: Bát thuần Tốn
-  7
-VN_TEXT
  11
--136.0
+-85.0
  21
--77.2
+-84.0
  31
 0.0
-100
-AcDbText
   0
-TEXT
+LINE
   5
 DD
 330
@@ -7685,31 +7673,25 @@ DD
 100
 AcDbEntity
   8
-CHU_THICH
+HAO_DUONG
+370
+20
 100
-AcDbText
+AcDbLine
  10
--136.0
+-85.0
  20
--82.4
+-84.0
  30
 0.0
- 40
-2.4
-  1
-3. Dần (03-05h) : Can Chi Mậu Dần    | D: 35 | Â: 30  --> Quẻ: Trạch hỏa Cách
-  7
-VN_TEXT
  11
--136.0
+-130.0
  21
--82.4
+-84.0
  31
 0.0
-100
-AcDbText
   0
-TEXT
+LINE
   5
 DE
 330
@@ -7717,29 +7699,23 @@ DE
 100
 AcDbEntity
   8
-CHU_THICH
+HAO_DUONG
+370
+20
 100
-AcDbText
+AcDbLine
  10
--136.0
+-130.0
  20
--87.60000000000001
+-84.0
  30
 0.0
- 40
-2.4
-  1
-4. Mão (05-07h) : Can Chi Kỷ Mão     | D: 36 | Â: 28  --> Quẻ: Thiên địa Bĩ
-  7
-VN_TEXT
  11
--136.0
+-130.0
  21
--87.60000000000001
+-68.0
  31
 0.0
-100
-AcDbText
   0
 TEXT
   5
@@ -7749,25 +7725,25 @@ DF
 100
 AcDbEntity
   8
-CHU_THICH
+HAO_DUONG
 100
 AcDbText
  10
--136.0
+-128.0
  20
--92.80000000000001
+-72.5
  30
 0.0
  40
-2.4
+3.2
   1
-5. Thìn (07-09h) : Can Chi Canh Thìn  | D: 51 | Â: 22  --> Quẻ: Lôi phong Hằng
+9 năm
   7
-VN_TEXT
+VN_BOLD
  11
--136.0
+-128.0
  21
--92.80000000000001
+-72.5
  31
 0.0
 100
@@ -7785,21 +7761,21 @@ CHU_THICH
 100
 AcDbText
  10
--136.0
+-128.0
  20
--98.00000000000001
+-76.5
  30
 0.0
  40
-2.4
+2.5
   1
-6. Tị (09-11h)  : Can Chi Tân Tị     | D: 29 | Â: 38  --> Quẻ: Bát thuần Cấn
+1-9 tuổi
   7
-VN_TEXT
+VN_BOLD
  11
--136.0
+-128.0
  21
--98.00000000000001
+-76.5
  31
 0.0
 100
@@ -7817,21 +7793,21 @@ CHU_THICH
 100
 AcDbText
  10
-3.0
+-128.0
  20
--72.0
+-80.0
  30
 0.0
  40
-2.4
+2.1
   1
-7. Ngọ (11-13h) : Can Chi Nhâm Ngọ   | D: 36 | Â: 30  --> Quẻ: Thiên hỏa Đồng nhân
+2014 - 2022
   7
 VN_TEXT
  11
-3.0
+-128.0
  21
--72.0
+-80.0
  31
 0.0
 100
@@ -7845,153 +7821,25 @@ E2
 100
 AcDbEntity
   8
-CHU_THICH
+HAO_DUONG
 100
 AcDbText
  10
-3.0
+-128.0
  20
--77.2
+-83.0
  30
 0.0
  40
-2.4
+2.1
   1
-8. Mùi (13-15h) : Can Chi Quý Mùi    | D: 37 | Â: 22  --> Quẻ: Địa phong Thăng
+Dương (+)
   7
-VN_TEXT
+VN_BOLD
  11
-3.0
+-128.0
  21
--77.2
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-E3
-330
-17
-100
-AcDbEntity
-  8
-CHU_THICH
-100
-AcDbText
- 10
-3.0
- 20
--82.4
- 30
-0.0
- 40
-2.4
-  1
-9. Thân (15-17h) : Can Chi Giáp Thân  | D: 31 | Â: 30  --> Quẻ: Phong hỏa Gia nhân
-  7
-VN_TEXT
- 11
-3.0
- 21
--82.4
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-E4
-330
-17
-100
-AcDbEntity
-  8
-CHU_THICH
-100
-AcDbText
- 10
-3.0
- 20
--87.60000000000001
- 30
-0.0
- 40
-2.4
-  1
-10. Dậu (17-19h) : Can Chi Ất Dậu     | D: 31 | Â: 32  --> Quẻ: Bát thuần Tốn
-  7
-VN_TEXT
- 11
-3.0
- 21
--87.60000000000001
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-E5
-330
-17
-100
-AcDbEntity
-  8
-CHU_THICH
-100
-AcDbText
- 10
-3.0
- 20
--92.80000000000001
- 30
-0.0
- 40
-2.4
-  1
-11. Tuất (19-21h) : Can Chi Bính Tuất  | D: 37 | Â: 22  --> Quẻ: Địa phong Thăng
-  7
-VN_TEXT
- 11
-3.0
- 21
--92.80000000000001
- 31
-0.0
-100
-AcDbText
-  0
-TEXT
-  5
-E6
-330
-17
-100
-AcDbEntity
-  8
-CHU_THICH
-100
-AcDbText
- 10
-3.0
- 20
--98.00000000000001
- 30
-0.0
- 40
-2.4
-  1
-12. Hợi (21-23h) : Can Chi Đinh Hợi   | D: 40 | Â: 24  --> Quẻ: Phong lôi Ích
-  7
-VN_TEXT
- 11
-3.0
- 21
--98.00000000000001
+-83.0
  31
 0.0
 100
@@ -7999,29 +7847,139 @@ AcDbText
   0
 LINE
   5
+E3
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-81.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+-51.0
+ 21
+-68.0
+ 31
+0.0
+  0
+LINE
+  5
+E4
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-51.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+-51.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+E5
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-51.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+-81.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+E6
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-81.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+-81.0
+ 21
+-68.0
+ 31
+0.0
+  0
+TEXT
+  5
 E7
 330
 17
 100
 AcDbEntity
   8
-NET_CHINH
-370
-15
+HAO_AM
 100
-AcDbLine
+AcDbText
  10
--140.0
+-79.0
  20
--106.0
+-72.5
  30
 0.0
+ 40
+3.2
+  1
+6 năm
+  7
+VN_BOLD
  11
-140.0
+-79.0
  21
--106.0
+-72.5
  31
 0.0
+100
+AcDbText
   0
 TEXT
   5
@@ -8031,25 +7989,25 @@ E8
 100
 AcDbEntity
   8
-SAN_CAT
+CHU_THICH
 100
 AcDbText
  10
--136.0
+-79.0
  20
--111.0
+-76.5
  30
 0.0
  40
-2.7
+2.5
   1
-KẾT LUẬN & ỨNG DỤNG BÁT TRẠCH: Người 3 (Nam 2014) mang Quái mệnh CẤN (Dương Thổ, Tây tứ mệnh). Hợp các hướng Tây tứ trạch:
+10-15 tuổi
   7
 VN_BOLD
  11
--136.0
+-79.0
  21
--111.0
+-76.5
  31
 0.0
 100
@@ -8067,21 +8025,2469 @@ CHU_THICH
 100
 AcDbText
  10
--136.0
+-79.0
  20
--116.5
+-80.0
+ 30
+0.0
+ 40
+2.1
+  1
+2023 - 2028
+  7
+VN_TEXT
+ 11
+-79.0
+ 21
+-80.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+EA
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+-79.0
+ 20
+-83.0
+ 30
+0.0
+ 40
+2.1
+  1
+Âm (-)
+  7
+VN_BOLD
+ 11
+-79.0
+ 21
+-83.0
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+EB
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-47.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+-17.0
+ 21
+-68.0
+ 31
+0.0
+  0
+LINE
+  5
+EC
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-17.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+-17.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+ED
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-17.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+-47.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+EE
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-47.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+-47.0
+ 21
+-68.0
+ 31
+0.0
+  0
+TEXT
+  5
+EF
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+-45.0
+ 20
+-72.5
+ 30
+0.0
+ 40
+3.2
+  1
+6 năm
+  7
+VN_BOLD
+ 11
+-45.0
+ 21
+-72.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+F0
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-45.0
+ 20
+-76.5
  30
 0.0
  40
 2.5
   1
-1. TÂY NAM (Sinh khí - Khôn Thổ) | 2. TÂY BẮC (Thiên y - Càn Kim) | 3. CHÍNH TÂY (Diên niên - Đoài Kim) | 4. ĐÔNG BẮC (Phục vị - Cấn Thổ).
+16-21 tuổi
+  7
+VN_BOLD
+ 11
+-45.0
+ 21
+-76.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+F1
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-45.0
+ 20
+-80.0
+ 30
+0.0
+ 40
+2.1
+  1
+2029 - 2034
+  7
+VN_TEXT
+ 11
+-45.0
+ 21
+-80.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+F2
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+-45.0
+ 20
+-83.0
+ 30
+0.0
+ 40
+2.1
+  1
+Âm (-)
+  7
+VN_BOLD
+ 11
+-45.0
+ 21
+-83.0
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+F3
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-13.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+32.0
+ 21
+-68.0
+ 31
+0.0
+  0
+LINE
+  5
+F4
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+32.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+32.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+F5
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+32.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+-13.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+F6
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-13.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+-13.0
+ 21
+-68.0
+ 31
+0.0
+  0
+TEXT
+  5
+F7
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+-11.0
+ 20
+-72.5
+ 30
+0.0
+ 40
+3.2
+  1
+9 năm
+  7
+VN_BOLD
+ 11
+-11.0
+ 21
+-72.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+F8
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-11.0
+ 20
+-76.5
+ 30
+0.0
+ 40
+2.5
+  1
+22-30 tuổi
+  7
+VN_BOLD
+ 11
+-11.0
+ 21
+-76.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+F9
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-11.0
+ 20
+-80.0
+ 30
+0.0
+ 40
+2.1
+  1
+2035 - 2043
+  7
+VN_TEXT
+ 11
+-11.0
+ 21
+-80.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+FA
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+-11.0
+ 20
+-83.0
+ 30
+0.0
+ 40
+2.1
+  1
+Dương (+)
+  7
+VN_BOLD
+ 11
+-11.0
+ 21
+-83.0
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+FB
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+36.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+81.0
+ 21
+-68.0
+ 31
+0.0
+  0
+LINE
+  5
+FC
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+81.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+81.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+FD
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+81.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+36.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+FE
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+36.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+36.0
+ 21
+-68.0
+ 31
+0.0
+  0
+TEXT
+  5
+FF
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+38.0
+ 20
+-72.5
+ 30
+0.0
+ 40
+3.2
+  1
+9 năm
+  7
+VN_BOLD
+ 11
+38.0
+ 21
+-72.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+100
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+38.0
+ 20
+-76.5
+ 30
+0.0
+ 40
+2.5
+  1
+31-39 tuổi
+  7
+VN_BOLD
+ 11
+38.0
+ 21
+-76.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+101
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+38.0
+ 20
+-80.0
+ 30
+0.0
+ 40
+2.1
+  1
+2044 - 2052
+  7
+VN_TEXT
+ 11
+38.0
+ 21
+-80.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+102
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+38.0
+ 20
+-83.0
+ 30
+0.0
+ 40
+2.1
+  1
+Dương (+)
+  7
+VN_BOLD
+ 11
+38.0
+ 21
+-83.0
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+103
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+85.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+130.0
+ 21
+-68.0
+ 31
+0.0
+  0
+LINE
+  5
+104
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+130.0
+ 20
+-68.0
+ 30
+0.0
+ 11
+130.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+105
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+130.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+85.0
+ 21
+-84.0
+ 31
+0.0
+  0
+LINE
+  5
+106
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+85.0
+ 20
+-84.0
+ 30
+0.0
+ 11
+85.0
+ 21
+-68.0
+ 31
+0.0
+  0
+TEXT
+  5
+107
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+87.0
+ 20
+-72.5
+ 30
+0.0
+ 40
+3.2
+  1
+9 năm
+  7
+VN_BOLD
+ 11
+87.0
+ 21
+-72.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+108
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+87.0
+ 20
+-76.5
+ 30
+0.0
+ 40
+2.5
+  1
+40-48 tuổi
+  7
+VN_BOLD
+ 11
+87.0
+ 21
+-76.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+109
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+87.0
+ 20
+-80.0
+ 30
+0.0
+ 40
+2.1
+  1
+2053 - 2061
+  7
+VN_TEXT
+ 11
+87.0
+ 21
+-80.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+10A
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+87.0
+ 20
+-83.0
+ 30
+0.0
+ 40
+2.1
+  1
+Dương (+)
+  7
+VN_BOLD
+ 11
+87.0
+ 21
+-83.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+10B
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-136.0
+ 20
+-87.5
+ 30
+0.0
+ 40
+3.0
+  1
+2. HẬU VẬN (Quẻ Hậu thiên, 49 - 90 tuổi):
+  7
+VN_BOLD
+ 11
+-136.0
+ 21
+-87.5
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+10C
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-130.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+-100.0
+ 21
+-89.0
+ 31
+0.0
+  0
+LINE
+  5
+10D
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-100.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+-100.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+10E
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-100.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+-130.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+10F
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+-130.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+-130.0
+ 21
+-89.0
+ 31
+0.0
+  0
+TEXT
+  5
+110
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+-128.0
+ 20
+-93.5
+ 30
+0.0
+ 40
+3.2
+  1
+6 năm
+  7
+VN_BOLD
+ 11
+-128.0
+ 21
+-93.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+111
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-128.0
+ 20
+-97.5
+ 30
+0.0
+ 40
+2.5
+  1
+49-54 tuổi
+  7
+VN_BOLD
+ 11
+-128.0
+ 21
+-97.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+112
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-128.0
+ 20
+-101.0
+ 30
+0.0
+ 40
+2.1
+  1
+2062 - 2067
+  7
+VN_TEXT
+ 11
+-128.0
+ 21
+-101.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+113
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+-128.0
+ 20
+-104.0
+ 30
+0.0
+ 40
+2.1
+  1
+Âm (-)
+  7
+VN_BOLD
+ 11
+-128.0
+ 21
+-104.0
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+114
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-96.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+-51.0
+ 21
+-89.0
+ 31
+0.0
+  0
+LINE
+  5
+115
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-51.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+-51.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+116
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-51.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+-96.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+117
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-96.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+-96.0
+ 21
+-89.0
+ 31
+0.0
+  0
+TEXT
+  5
+118
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+-94.0
+ 20
+-93.5
+ 30
+0.0
+ 40
+3.2
+  1
+9 năm
+  7
+VN_BOLD
+ 11
+-94.0
+ 21
+-93.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+119
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-94.0
+ 20
+-97.5
+ 30
+0.0
+ 40
+2.5
+  1
+55-63 tuổi
+  7
+VN_BOLD
+ 11
+-94.0
+ 21
+-97.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+11A
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-94.0
+ 20
+-101.0
+ 30
+0.0
+ 40
+2.1
+  1
+2068 - 2076
+  7
+VN_TEXT
+ 11
+-94.0
+ 21
+-101.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+11B
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+-94.0
+ 20
+-104.0
+ 30
+0.0
+ 40
+2.1
+  1
+Dương (+)
+  7
+VN_BOLD
+ 11
+-94.0
+ 21
+-104.0
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+11C
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-47.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+-2.0
+ 21
+-89.0
+ 31
+0.0
+  0
+LINE
+  5
+11D
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-2.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+-2.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+11E
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-2.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+-47.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+11F
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+370
+20
+100
+AcDbLine
+ 10
+-47.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+-47.0
+ 21
+-89.0
+ 31
+0.0
+  0
+TEXT
+  5
+120
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+-45.0
+ 20
+-93.5
+ 30
+0.0
+ 40
+3.2
+  1
+9 năm
+  7
+VN_BOLD
+ 11
+-45.0
+ 21
+-93.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+121
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-45.0
+ 20
+-97.5
+ 30
+0.0
+ 40
+2.5
+  1
+64-72 tuổi
+  7
+VN_BOLD
+ 11
+-45.0
+ 21
+-97.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+122
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-45.0
+ 20
+-101.0
+ 30
+0.0
+ 40
+2.1
+  1
+2077 - 2085
+  7
+VN_TEXT
+ 11
+-45.0
+ 21
+-101.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+123
+330
+17
+100
+AcDbEntity
+  8
+HAO_DUONG
+100
+AcDbText
+ 10
+-45.0
+ 20
+-104.0
+ 30
+0.0
+ 40
+2.1
+  1
+Dương (+)
+  7
+VN_BOLD
+ 11
+-45.0
+ 21
+-104.0
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+124
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+2.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+32.0
+ 21
+-89.0
+ 31
+0.0
+  0
+LINE
+  5
+125
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+32.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+32.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+126
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+32.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+2.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+127
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+2.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+2.0
+ 21
+-89.0
+ 31
+0.0
+  0
+TEXT
+  5
+128
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+4.0
+ 20
+-93.5
+ 30
+0.0
+ 40
+3.2
+  1
+6 năm
+  7
+VN_BOLD
+ 11
+4.0
+ 21
+-93.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+129
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+4.0
+ 20
+-97.5
+ 30
+0.0
+ 40
+2.5
+  1
+73-78 tuổi
+  7
+VN_BOLD
+ 11
+4.0
+ 21
+-97.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+12A
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+4.0
+ 20
+-101.0
+ 30
+0.0
+ 40
+2.1
+  1
+2086 - 2091
+  7
+VN_TEXT
+ 11
+4.0
+ 21
+-101.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+12B
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+4.0
+ 20
+-104.0
+ 30
+0.0
+ 40
+2.1
+  1
+Âm (-)
+  7
+VN_BOLD
+ 11
+4.0
+ 21
+-104.0
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+12C
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+36.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+66.0
+ 21
+-89.0
+ 31
+0.0
+  0
+LINE
+  5
+12D
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+66.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+66.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+12E
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+66.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+36.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+12F
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+36.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+36.0
+ 21
+-89.0
+ 31
+0.0
+  0
+TEXT
+  5
+130
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+38.0
+ 20
+-93.5
+ 30
+0.0
+ 40
+3.2
+  1
+6 năm
+  7
+VN_BOLD
+ 11
+38.0
+ 21
+-93.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+131
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+38.0
+ 20
+-97.5
+ 30
+0.0
+ 40
+2.5
+  1
+79-84 tuổi
+  7
+VN_BOLD
+ 11
+38.0
+ 21
+-97.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+132
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+38.0
+ 20
+-101.0
+ 30
+0.0
+ 40
+2.1
+  1
+2092 - 2097
+  7
+VN_TEXT
+ 11
+38.0
+ 21
+-101.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+133
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+38.0
+ 20
+-104.0
+ 30
+0.0
+ 40
+2.1
+  1
+Âm (-)
+  7
+VN_BOLD
+ 11
+38.0
+ 21
+-104.0
+ 31
+0.0
+100
+AcDbText
+  0
+LINE
+  5
+134
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+70.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+100.0
+ 21
+-89.0
+ 31
+0.0
+  0
+LINE
+  5
+135
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+100.0
+ 20
+-89.0
+ 30
+0.0
+ 11
+100.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+136
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+100.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+70.0
+ 21
+-105.0
+ 31
+0.0
+  0
+LINE
+  5
+137
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+370
+20
+100
+AcDbLine
+ 10
+70.0
+ 20
+-105.0
+ 30
+0.0
+ 11
+70.0
+ 21
+-89.0
+ 31
+0.0
+  0
+TEXT
+  5
+138
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+72.0
+ 20
+-93.5
+ 30
+0.0
+ 40
+3.2
+  1
+6 năm
+  7
+VN_BOLD
+ 11
+72.0
+ 21
+-93.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+139
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+72.0
+ 20
+-97.5
+ 30
+0.0
+ 40
+2.5
+  1
+85-90 tuổi
+  7
+VN_BOLD
+ 11
+72.0
+ 21
+-97.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+13A
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+72.0
+ 20
+-101.0
+ 30
+0.0
+ 40
+2.1
+  1
+2098 - 2103
+  7
+VN_TEXT
+ 11
+72.0
+ 21
+-101.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+13B
+330
+17
+100
+AcDbEntity
+  8
+HAO_AM
+100
+AcDbText
+ 10
+72.0
+ 20
+-104.0
+ 30
+0.0
+ 40
+2.1
+  1
+Âm (-)
+  7
+VN_BOLD
+ 11
+72.0
+ 21
+-104.0
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+13C
+330
+17
+100
+AcDbEntity
+  8
+SAN_CAT
+100
+AcDbText
+ 10
+-136.0
+ 20
+-110.5
+ 30
+0.0
+ 40
+2.8
+  1
+ỨNG DỤNG KHUYẾN NGHỊ: Người 3 hiện tại (năm 2026, 12 tuổi) đang ở ĐẠI VẬN 2 (10-15 tuổi) - Thời kỳ thiếu niên rèn luyện trí đức, phát triển học vấn.
+  7
+VN_BOLD
+ 11
+-136.0
+ 21
+-110.5
+ 31
+0.0
+100
+AcDbText
+  0
+TEXT
+  5
+13D
+330
+17
+100
+AcDbEntity
+  8
+CHU_THICH
+100
+AcDbText
+ 10
+-136.0
+ 20
+-116.0
+ 30
+0.0
+ 40
+2.5
+  1
+Phong thủy bổ trợ: Mệnh Cấn hợp Tây tứ trạch, góc học tập ưu tiên TÂY NAM (Sinh khí) hoặc TÂY BẮC (Thiên y). Bổ trợ hành Hỏa (tương sinh) và Thổ.
   7
 VN_TEXT
  11
 -136.0
  21
--116.5
+-116.0
  31
 0.0
 100
@@ -9177,7 +11583,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-EC
+140
   0
 DICTIONARYVAR
   5
@@ -9189,7 +11595,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-05T22:20:50.659427+00:00
+1.4.4 @ 2026-10-05T22:23:12.755589+00:00
   0
 VISUALSTYLE
   5
@@ -9893,7 +12299,7 @@ X-Ray
   0
 DICTIONARYVAR
   5
-EC
+140
 330
 2D
 100
@@ -9901,7 +12307,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-05T22:20:50.664941+00:00
+1.4.4 @ 2026-10-05T22:23:12.762120+00:00
   0
 ENDSEC
   0

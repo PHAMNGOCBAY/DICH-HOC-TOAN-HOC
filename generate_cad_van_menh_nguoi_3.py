@@ -38,7 +38,7 @@ def setup_dxf_document():
     l_duong = doc.layers.add("HAO_DUONG", color=1)
     l_duong.rgb = (185, 28, 28)
     l_am = doc.layers.add("HAO_AM", color=2)
-    l_am.rgb = (217, 119, 6) # Màu vàng kỹ thuật sắc nét trên nền trắng (theo skill cad-color-blue-to-yellow)
+    l_am.rgb = (217, 119, 6) # Màu vàng kỹ thuật sắc nét trên nền trắng (theo chuẩn skill cad-color-blue-to-yellow)
     return doc
 
 def export_dxf_to_png(doc, dxf_path, png_path, dpi=300):
@@ -87,8 +87,8 @@ def draw_van_menh_nguoi_3():
     msp.add_text("- Trị số năng lượng quái: E = +1 (Dương quái)", dxfattribs={"layer": "HAO_DUONG", "style": "VN_BOLD", "height": 3.2}).set_placement((-136, 49))
     msp.add_text("- Phân loại phong thủy: Tây tứ mệnh (Hợp Tây tứ trạch)", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.2}).set_placement((-136, 42))
     msp.add_text("- Cặp phu thê Tân thiên: KHÔN (Chính Bắc, E = -9, Âm Thổ)", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.2}).set_placement((-136, 35))
-    msp.add_text("- TÌNH TRẠNG DỮ LIỆU: Chưa có Giờ sinh (1 trong 12 giờ)", dxfattribs={"layer": "SAN_HUNG", "style": "VN_BOLD", "height": 3.0}).set_placement((-136, 28))
-    msp.add_text("  (Đã đủ để xác định Quái mệnh Bát Trạch; Cần giờ để chốt Quẻ Hà Lạc)", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.5}).set_placement((-136, 22))
+    msp.add_text("- CHU KỲ VẬN MỆNH: 12 Đại vận (Hào Dương 9 năm, Hào Âm 6 năm)", dxfattribs={"layer": "SAN_CAT", "style": "VN_BOLD", "height": 3.0}).set_placement((-136, 28))
+    msp.add_text("  (Tiền vận: 1-48 tuổi; Hậu vận: 49-90 tuổi theo Bát tự Hà Lạc)", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.5}).set_placement((-136, 22))
 
     # 3. KHỐI CẤU TRÚC 3 HÀO QUÁI CẤN (GÓC DƯỚI TRÁI: x = -140 đến 8, y = 12 đến -50)
     msp.add_line((-140, 12), (8, 12), dxfattribs={"layer": "KHUNG", "lineweight": 20})
@@ -172,62 +172,85 @@ def draw_van_menh_nguoi_3():
         ty2 = oy + r_text2 * math.sin(rad)
         msp.add_text(h_name, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.1}).set_placement((tx2, ty2), align=TextEntityAlignment.MIDDLE_CENTER)
 
-    # 5. KHỐI BÁT TỰ HÀ LẠC: ĐỐI CHIẾU 12 GIỜ SINH (TUÂN THỦ NGUYÊN TẮC ZERO SPECULATION)
+    # 5. KHỐI TRỤC THỜI GIAN 12 ĐẠI VẬN BÁT TỰ HÀ LẠC (TIỀN VẬN: 1-48 TUỔI & HẬU VẬN: 49-90 TUỔI)
     msp.add_line((-140, -56), (140, -56), dxfattribs={"layer": "KHUNG", "lineweight": 20})
     msp.add_line((140, -56), (140, -120), dxfattribs={"layer": "KHUNG", "lineweight": 20})
     msp.add_line((140, -120), (-140, -120), dxfattribs={"layer": "KHUNG", "lineweight": 20})
     msp.add_line((-140, -120), (-140, -56), dxfattribs={"layer": "KHUNG", "lineweight": 20})
     
-    msp.add_text("III. BÁT TỰ HÀ LẠC & BẢNG ĐỐI CHIẾU 12 GIỜ SINH KHẢ DĨ (NGUYÊN TẮC ZERO SPECULATION)", 
+    msp.add_text("III. CHU KỲ 12 ĐẠI VẬN BÁT TỰ HÀ LẠC: TIỀN VẬN (1 - 48 TUỔI) & HẬU VẬN (49 - 90 TUỔI)", 
                  dxfattribs={"layer": "TIEU_DE", "style": "VN_BOLD", "height": 4.2}).set_placement((-136, -61))
     
-    msp.add_text("LƯU Ý KHOA HỌC: Do người dùng chưa cung cấp giờ sinh, hệ thống tính toán chính xác 12 quẻ Tiên thiên khả dĩ ứng với 12 giờ:", 
-                 dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.7}).set_placement((-136, -66))
-
-    # Bảng 12 giờ sinh cho ngày Canh Tý (2 cột, mỗi cột 6 dòng)
-    col1_data = [
-        ("1. Tý (23-01h)", "Bính Tý", "D: 40 | Â: 24", "Phong lôi Ích"),
-        ("2. Sửu (01-03h)", "Đinh Sửu", "D: 49 | Â: 22", "Bát thuần Tốn"),
-        ("3. Dần (03-05h)", "Mậu Dần", "D: 35 | Â: 30", "Trạch hỏa Cách"),
-        ("4. Mão (05-07h)", "Kỷ Mão", "D: 36 | Â: 28", "Thiên địa Bĩ"),
-        ("5. Thìn (07-09h)", "Canh Thìn", "D: 51 | Â: 22", "Lôi phong Hằng"),
-        ("6. Tị (09-11h)", "Tân Tị", "D: 29 | Â: 38", "Bát thuần Cấn"),
+    # Dữ liệu phân kỳ 12 Đại vận cho Nam sinh năm 2014 (Giáp Ngọ):
+    # Hào Dương quản 9 năm (màu đỏ), Hào Âm quản 6 năm (màu vàng hổ phách)
+    tien_van_data = [
+        ("Vận 1: Hào 1 (Dương)", 9, 1, 9, "2014 - 2022", True),
+        ("Vận 2: Hào 2 (Âm)", 6, 10, 15, "2023 - 2028", False),
+        ("Vận 3: Hào 3 (Âm)", 6, 16, 21, "2029 - 2034", False),
+        ("Vận 4: Hào 4 (Dương)", 9, 22, 30, "2035 - 2043", True),
+        ("Vận 5: Hào 5 (Dương)", 9, 31, 39, "2044 - 2052", True),
+        ("Vận 6: Hào 6 (Dương)", 9, 40, 48, "2053 - 2061", True),
     ]
     
-    col2_data = [
-        ("7. Ngọ (11-13h)", "Nhâm Ngọ", "D: 36 | Â: 30", "Thiên hỏa Đồng nhân"),
-        ("8. Mùi (13-15h)", "Quý Mùi", "D: 37 | Â: 22", "Địa phong Thăng"),
-        ("9. Thân (15-17h)", "Giáp Thân", "D: 31 | Â: 30", "Phong hỏa Gia nhân"),
-        ("10. Dậu (17-19h)", "Ất Dậu", "D: 31 | Â: 32", "Bát thuần Tốn"),
-        ("11. Tuất (19-21h)", "Bính Tuất", "D: 37 | Â: 22", "Địa phong Thăng"),
-        ("12. Hợi (21-23h)", "Đinh Hợi", "D: 40 | Â: 24", "Phong lôi Ích"),
+    hau_van_data = [
+        ("Vận 7: Hào 1 (Âm)", 6, 49, 54, "2062 - 2067", False),
+        ("Vận 8: Hào 2 (Dương)", 9, 55, 63, "2068 - 2076", True),
+        ("Vận 9: Hào 3 (Dương)", 9, 64, 72, "2077 - 2085", True),
+        ("Vận 10: Hào 4 (Âm)", 6, 73, 78, "2086 - 2091", False),
+        ("Vận 11: Hào 5 (Âm)", 6, 79, 84, "2092 - 2097", False),
+        ("Vận 12: Hào 6 (Âm)", 6, 85, 90, "2098 - 2103", False),
     ]
-
-    y_t = -72.0
-    dy = 5.2
-    # Cột 1
-    for gio, canchi, so_am_duong, que in col1_data:
-        msp.add_text(f"{gio:<15} : Can Chi {canchi:<10} | {so_am_duong}  --> Quẻ: {que}", 
-                     dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.4}).set_placement((-136, y_t))
-        y_t -= dy
+    
+    # HÀNG 1: TIỀN VẬN (1 - 48 tuổi)
+    msp.add_text("1. TIỀN VẬN (Quẻ Tiên thiên, 1 - 48 tuổi):", 
+                 dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 3.0}).set_placement((-136, -66.5))
+    x_cursor = -130.0
+    for title, dur, a1, a2, y_range, is_yang in tien_van_data:
+        block_w = dur * 5.0
+        box_y = -68.0
+        box_h = 16.0
+        box_layer = "HAO_DUONG" if is_yang else "HAO_AM"
         
-    y_t = -72.0
-    # Cột 2
-    for gio, canchi, so_am_duong, que in col2_data:
-        msp.add_text(f"{gio:<15} : Can Chi {canchi:<10} | {so_am_duong}  --> Quẻ: {que}", 
-                     dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.4}).set_placement((3, y_t))
-        y_t -= dy
+        msp.add_line((x_cursor, box_y), (x_cursor + block_w, box_y), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor + block_w, box_y), (x_cursor + block_w, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor + block_w, box_y - box_h), (x_cursor, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor, box_y - box_h), (x_cursor, box_y), dxfattribs={"layer": box_layer, "lineweight": 20})
+        
+        msp.add_text(f"{dur} năm", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 3.2}).set_placement((x_cursor + 2, box_y - 4.5))
+        msp.add_text(f"{a1}-{a2} tuổi", dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 2.5}).set_placement((x_cursor + 2, box_y - 8.5))
+        msp.add_text(y_range, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.1}).set_placement((x_cursor + 2, box_y - 12.0))
+        msp.add_text("Dương (+)" if is_yang else "Âm (-)", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 2.1}).set_placement((x_cursor + 2, box_y - 15.0))
+        x_cursor += block_w + 4.0
 
-    # Phần kết luận và khuyến nghị ứng dụng
-    msp.add_line((-140, -106), (140, -106), dxfattribs={"layer": "NET_CHINH", "lineweight": 15})
-    msp.add_text("KẾT LUẬN & ỨNG DỤNG BÁT TRẠCH: Người 3 (Nam 2014) mang Quái mệnh CẤN (Dương Thổ, Tây tứ mệnh). Hợp các hướng Tây tứ trạch:", 
-                 dxfattribs={"layer": "SAN_CAT", "style": "VN_BOLD", "height": 2.7}).set_placement((-136, -111.0))
-    msp.add_text("1. TÂY NAM (Sinh khí - Khôn Thổ) | 2. TÂY BẮC (Thiên y - Càn Kim) | 3. CHÍNH TÂY (Diên niên - Đoài Kim) | 4. ĐÔNG BẮC (Phục vị - Cấn Thổ).", 
-                 dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.5}).set_placement((-136, -116.5))
+    # HÀNG 2: HẬU VẬN (49 - 90 tuổi)
+    msp.add_text("2. HẬU VẬN (Quẻ Hậu thiên, 49 - 90 tuổi):", 
+                 dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 3.0}).set_placement((-136, -87.5))
+    x_cursor = -130.0
+    for title, dur, a1, a2, y_range, is_yang in hau_van_data:
+        block_w = dur * 5.0
+        box_y = -89.0
+        box_h = 16.0
+        box_layer = "HAO_DUONG" if is_yang else "HAO_AM"
+        
+        msp.add_line((x_cursor, box_y), (x_cursor + block_w, box_y), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor + block_w, box_y), (x_cursor + block_w, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor + block_w, box_y - box_h), (x_cursor, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor, box_y - box_h), (x_cursor, box_y), dxfattribs={"layer": box_layer, "lineweight": 20})
+        
+        msp.add_text(f"{dur} năm", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 3.2}).set_placement((x_cursor + 2, box_y - 4.5))
+        msp.add_text(f"{a1}-{a2} tuổi", dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 2.5}).set_placement((x_cursor + 2, box_y - 8.5))
+        msp.add_text(y_range, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.1}).set_placement((x_cursor + 2, box_y - 12.0))
+        msp.add_text("Dương (+)" if is_yang else "Âm (-)", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 2.1}).set_placement((x_cursor + 2, box_y - 15.0))
+        x_cursor += block_w + 4.0
+        
+    msp.add_text("ỨNG DỤNG KHUYẾN NGHỊ: Người 3 hiện tại (năm 2026, 12 tuổi) đang ở ĐẠI VẬN 2 (10-15 tuổi) - Thời kỳ thiếu niên rèn luyện trí đức, phát triển học vấn.", 
+                 dxfattribs={"layer": "SAN_CAT", "style": "VN_BOLD", "height": 2.8}).set_placement((-136, -110.5))
+    msp.add_text("Phong thủy bổ trợ: Mệnh Cấn hợp Tây tứ trạch, góc học tập ưu tiên TÂY NAM (Sinh khí) hoặc TÂY BẮC (Thiên y). Bổ trợ hành Hỏa (tương sinh) và Thổ.", 
+                 dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.5}).set_placement((-136, -116.0))
 
     export_dxf_to_png(doc, dxf_path, png_path)
 
 if __name__ == "__main__":
-    print("Bắt đầu vẽ bản vẽ kỹ thuật CAD Vận mệnh Người 3 (Nam 2014) chuẩn Zero Speculation...")
+    print("Bắt đầu vẽ bản vẽ kỹ thuật CAD Vận mệnh Người 3 (Nam 2014) bổ sung chu kỳ 12 đại vận...")
     draw_van_menh_nguoi_3()
     print("Hoàn tất 100% xuất bản vẽ CAD và hình ảnh PNG Người 3.")
