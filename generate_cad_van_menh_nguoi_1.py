@@ -162,51 +162,81 @@ def draw_van_menh_nguoi_1():
         ty2 = oy + r_text2 * math.sin(rad)
         msp.add_text(h_name, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.3}).set_placement((tx2, ty2), align=TextEntityAlignment.MIDDLE_CENTER)
 
-    # 5. KHỐI TRỤC THỜI GIAN ĐẠI VẬN ĐỜI NGƯỜI (GÓC DƯỚI: x = -140 đến 140, y = -60 đến -118)
+    # 5. KHỐI TRỤC THỜI GIAN 12 ĐẠI VẬN ĐỜI NGƯỜI (TIỀN VẬN: 1-48 TUỔI & HẬU VẬN: 49-96 TUỔI)
     msp.add_line((-140, -56), (140, -56), dxfattribs={"layer": "KHUNG", "lineweight": 20})
-    msp.add_line((140, -56), (140, -118), dxfattribs={"layer": "KHUNG", "lineweight": 20})
-    msp.add_line((140, -118), (-140, -118), dxfattribs={"layer": "KHUNG", "lineweight": 20})
-    msp.add_line((-140, -118), (-140, -56), dxfattribs={"layer": "KHUNG", "lineweight": 20})
+    msp.add_line((140, -56), (140, -120), dxfattribs={"layer": "KHUNG", "lineweight": 20})
+    msp.add_line((140, -120), (-140, -120), dxfattribs={"layer": "KHUNG", "lineweight": 20})
+    msp.add_line((-140, -120), (-140, -56), dxfattribs={"layer": "KHUNG", "lineweight": 20})
     
-    msp.add_text("III. CHU KỲ PHÂN KỲ ĐẠI VẬN THEO DÒNG ĐỜI (HÀO DƯƠNG 9 NĂM, HÀO ÂM 6 NĂM)", 
-                 dxfattribs={"layer": "TIEU_DE", "style": "VN_BOLD", "height": 4.8}).set_placement((-135, -63))
+    msp.add_text("III. CHU KỲ 12 ĐẠI VẬN TRỌN ĐỜI: TIỀN VẬN (1 - 48 TUỔI) & HẬU VẬN (49 - 96 TUỔI)", 
+                 dxfattribs={"layer": "TIEU_DE", "style": "VN_BOLD", "height": 4.5}).set_placement((-135, -61))
     
-    # 7 chu kỳ Đại vận vẽ thành các block ngang
-    van_data = [
+    # Dữ liệu Tiền vận (Quẻ Tiên thiên: 6 đại vận, tổng 48 năm)
+    tien_van_data = [
         ("Vận 1: Hào 1 (Âm)", 6, 1, 6, "1984 - 1989", False),
         ("Vận 2: Hào 2 (Dương)", 9, 7, 15, "1990 - 1998", True),
         ("Vận 3: Hào 3 (Dương)", 9, 16, 24, "1999 - 2007", True),
         ("Vận 4: Hào 4 (Dương)", 9, 25, 33, "2008 - 2016", True),
         ("Vận 5: Hào 5 (Âm)", 6, 34, 39, "2017 - 2022", False),
         ("Vận 6: Hào 6 (Dương)", 9, 40, 48, "2023 - 2031", True),
-        ("Vận 7: Hào 1 (Âm)", 6, 49, 54, "2032 - 2037", False),
     ]
     
-    x_cursor = -135.0
-    for title, dur, a1, a2, y_range, is_yang in van_data:
-        block_w = dur * 4.1
-        box_y = -72.0
-        box_h = 24.0
-        
-        # Khung đại vận
+    # Dữ liệu Hậu vận (Quẻ Hậu thiên: 6 đại vận tiếp nối, tổng 48 năm)
+    hau_van_data = [
+        ("Vận 7: Hào 1 (Dương)", 9, 49, 57, "2032 - 2040", True),
+        ("Vận 8: Hào 2 (Âm)", 6, 58, 63, "2041 - 2046", False),
+        ("Vận 9: Hào 3 (Dương)", 9, 64, 72, "2047 - 2055", True),
+        ("Vận 10: Hào 4 (Âm)", 6, 73, 78, "2056 - 2061", False),
+        ("Vận 11: Hào 5 (Dương)", 9, 79, 87, "2062 - 2070", True),
+        ("Vận 12: Hào 6 (Dương)", 9, 88, 96, "2071 - 2079", True),
+    ]
+    
+    # HÀNG 1: TIỀN VẬN
+    msp.add_text("1. TIỀN VẬN (Quẻ Tiên thiên, 1 - 48 tuổi):", 
+                 dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 3.0}).set_placement((-135, -66.5))
+    x_cursor = -130.0
+    for title, dur, a1, a2, y_range, is_yang in tien_van_data:
+        block_w = dur * 5.0
+        box_y = -68.0
+        box_h = 16.0
         box_layer = "HAO_DUONG" if is_yang else "HAO_AM"
-        msp.add_line((x_cursor, box_y), (x_cursor + block_w, box_y), dxfattribs={"layer": box_layer, "lineweight": 22})
-        msp.add_line((x_cursor + block_w, box_y), (x_cursor + block_w, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 22})
-        msp.add_line((x_cursor + block_w, box_y - box_h), (x_cursor, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 22})
-        msp.add_line((x_cursor, box_y - box_h), (x_cursor, box_y), dxfattribs={"layer": box_layer, "lineweight": 22})
         
-        # Nhãn đại vận
-        msp.add_text(f"{dur} năm", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 3.8}).set_placement((x_cursor + 2, box_y - 6))
-        msp.add_text(f"{a1}-{a2} tuổi", dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 3.0}).set_placement((x_cursor + 2, box_y - 12))
-        msp.add_text(y_range, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.6}).set_placement((x_cursor + 2, box_y - 17))
-        msp.add_text("Dương (+)" if is_yang else "Âm (-)", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 2.6}).set_placement((x_cursor + 2, box_y - 21))
+        msp.add_line((x_cursor, box_y), (x_cursor + block_w, box_y), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor + block_w, box_y), (x_cursor + block_w, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor + block_w, box_y - box_h), (x_cursor, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor, box_y - box_h), (x_cursor, box_y), dxfattribs={"layer": box_layer, "lineweight": 20})
         
-        x_cursor += block_w + 3.0
+        msp.add_text(f"{dur} năm", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 3.2}).set_placement((x_cursor + 2, box_y - 4.5))
+        msp.add_text(f"{a1}-{a2} tuổi", dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 2.5}).set_placement((x_cursor + 2, box_y - 8.5))
+        msp.add_text(y_range, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.1}).set_placement((x_cursor + 2, box_y - 12.0))
+        msp.add_text("Dương (+)" if is_yang else "Âm (-)", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 2.1}).set_placement((x_cursor + 2, box_y - 15.0))
+        x_cursor += block_w + 4.0
+
+    # HÀNG 2: HẬU VẬN
+    msp.add_text("2. HẬU VẬN (Quẻ Hậu thiên, 49 - 96 tuổi):", 
+                 dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 3.0}).set_placement((-135, -87.5))
+    x_cursor = -130.0
+    for title, dur, a1, a2, y_range, is_yang in hau_van_data:
+        block_w = dur * 5.0
+        box_y = -89.0
+        box_h = 16.0
+        box_layer = "HAO_DUONG" if is_yang else "HAO_AM"
         
-    msp.add_text("ỨNG DỤNG KHUYẾN NGHỊ: Người 1 hiện tại (năm 2026, 42 tuổi) đang ở ĐẠI VẬN 6 (Hào Dương, 40-48 tuổi) - Giai đoạn hành động mạnh mẽ, vượng khí.", 
-                 dxfattribs={"layer": "SAN_CAT", "style": "VN_BOLD", "height": 3.6}).set_placement((-135, -104))
-    msp.add_text("Phong thủy bổ trợ: Bàn làm việc, hướng giường ưu tiên CHÍNH BẮC (Sinh khí) hoặc CHÍNH NAM (Thiên y). Bổ trợ hành Thủy và Mộc.", 
-                 dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.4}).set_placement((-135, -112))
+        msp.add_line((x_cursor, box_y), (x_cursor + block_w, box_y), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor + block_w, box_y), (x_cursor + block_w, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor + block_w, box_y - box_h), (x_cursor, box_y - box_h), dxfattribs={"layer": box_layer, "lineweight": 20})
+        msp.add_line((x_cursor, box_y - box_h), (x_cursor, box_y), dxfattribs={"layer": box_layer, "lineweight": 20})
+        
+        msp.add_text(f"{dur} năm", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 3.2}).set_placement((x_cursor + 2, box_y - 4.5))
+        msp.add_text(f"{a1}-{a2} tuổi", dxfattribs={"layer": "CHU_THICH", "style": "VN_BOLD", "height": 2.5}).set_placement((x_cursor + 2, box_y - 8.5))
+        msp.add_text(y_range, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.1}).set_placement((x_cursor + 2, box_y - 12.0))
+        msp.add_text("Dương (+)" if is_yang else "Âm (-)", dxfattribs={"layer": box_layer, "style": "VN_BOLD", "height": 2.1}).set_placement((x_cursor + 2, box_y - 15.0))
+        x_cursor += block_w + 4.0
+        
+    msp.add_text("ỨNG DỤNG KHUYẾN NGHỊ: Người 1 hiện tại (năm 2026, 42 tuổi) đang ở ĐẠI VẬN 6 (Hào Dương, 40-48 tuổi) - Giai đoạn hành động mạnh mẽ, đỉnh cao vượng khí.", 
+                 dxfattribs={"layer": "SAN_CAT", "style": "VN_BOLD", "height": 3.2}).set_placement((-135, -110.0))
+    msp.add_text("Cơ chế Dịch học: Cuộc đời gồm trọn vẹn 12 Đại vận (6 Tiền vận + 6 Hậu vận) kéo dài đến 96 tuổi. Phong thủy bổ trợ: CHÍNH BẮC (Sinh khí) và CHÍNH NAM (Thiên y).", 
+                 dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.8}).set_placement((-135, -116.0))
 
     export_dxf_to_png(doc, dxf_path, png_path)
 
