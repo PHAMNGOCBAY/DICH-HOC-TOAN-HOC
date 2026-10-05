@@ -20,15 +20,23 @@ def setup_dxf_document():
     doc.styles.new("VN_TEXT", dxfattribs={"font": "arial.ttf"})
     doc.styles.new("VN_BOLD", dxfattribs={"font": "arialbd.ttf"})
     
-    doc.layers.add("KHUNG", color=7)
-    doc.layers.add("NET_CHINH", color=7)
-    doc.layers.add("SAN_CAT", color=3)    # Xanh lá cây (Cát)
-    doc.layers.add("SAN_HUNG", color=1)   # Đỏ (Hung)
-    doc.layers.add("HAO_DUONG", color=1)  # Đỏ
-    layer_am = doc.layers.add("HAO_AM", color=2)  # Màu vàng (Yellow - AutoCAD ACI 2)
-    layer_am.rgb = (217, 119, 6)                  # Tông màu vàng kỹ thuật sắc nét trên nền trắng
-    doc.layers.add("CHU_THICH", color=7)
-    doc.layers.add("TIEU_DE", color=7)
+    l_khung = doc.layers.add("KHUNG", color=7)
+    l_khung.rgb = (0, 0, 0)
+    l_net = doc.layers.add("NET_CHINH", color=7)
+    l_net.rgb = (0, 0, 0)
+    l_tieu_de = doc.layers.add("TIEU_DE", color=7)
+    l_tieu_de.rgb = (0, 0, 0)
+    l_chu_thich = doc.layers.add("CHU_THICH", color=7)
+    l_chu_thich.rgb = (0, 0, 0)
+    
+    l_cat = doc.layers.add("SAN_CAT", color=3)
+    l_cat.rgb = (21, 128, 61)
+    l_hung = doc.layers.add("SAN_HUNG", color=1)
+    l_hung.rgb = (185, 28, 28)
+    l_duong = doc.layers.add("HAO_DUONG", color=1)
+    l_duong.rgb = (185, 28, 28)
+    l_am = doc.layers.add("HAO_AM", color=2)
+    l_am.rgb = (217, 119, 6)
     return doc
 
 from ezdxf.addons.drawing.config import Configuration, BackgroundPolicy, ColorPolicy
@@ -39,12 +47,14 @@ def export_dxf_to_png(doc, dxf_path, png_path, dpi=300):
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set_facecolor('#FFFFFF')
     ctx = RenderContext(doc)
-    cfg = Configuration(background_policy=BackgroundPolicy.WHITE, color_policy=ColorPolicy.COLOR_SWAP_BW)
+    cfg = Configuration(background_policy=BackgroundPolicy.WHITE, color_policy=ColorPolicy.COLOR)
     out = MatplotlibBackend(ax)
     Frontend(ctx, out, config=cfg).draw_layout(doc.modelspace(), finalize=True)
     fig.savefig(png_path, dpi=dpi, facecolor='#FFFFFF', edgecolor='none')
     plt.close(fig)
     print(f"  [Đã xuất Bản vẽ Vận mệnh Người 1] {os.path.basename(png_path)} ({os.path.getsize(png_path):,} bytes)")
+
+from ezdxf.enums import TextEntityAlignment
 
 def draw_van_menh_nguoi_1():
     dxf_path = os.path.join(OUTPUT_DIR, "cad_van_menh_nguoi_1.dxf")
@@ -64,10 +74,10 @@ def draw_van_menh_nguoi_1():
     msp.add_line((145, -125), (-145, -125), dxfattribs={"layer": "KHUNG", "lineweight": 35})
     msp.add_line((-145, -125), (-145, 125), dxfattribs={"layer": "KHUNG", "lineweight": 35})
     
-    # 2. KHỐI THÔNG TIN BÁT TỰ & QUÁI MỆNH (GÓC TRÊN TRÁI: x = -140 đến -55, y = 95 đến 20)
-    msp.add_line((-140, 98), (-55, 98), dxfattribs={"layer": "KHUNG", "lineweight": 20})
-    msp.add_line((-55, 98), (-55, 20), dxfattribs={"layer": "KHUNG", "lineweight": 20})
-    msp.add_line((-55, 20), (-140, 20), dxfattribs={"layer": "KHUNG", "lineweight": 20})
+    # 2. KHỐI THÔNG TIN BÁT TỰ & QUÁI MỆNH (GÓC TRÊN TRÁI: x = -140 đến 12, y = 98 đến 20)
+    msp.add_line((-140, 98), (12, 98), dxfattribs={"layer": "KHUNG", "lineweight": 20})
+    msp.add_line((12, 98), (12, 20), dxfattribs={"layer": "KHUNG", "lineweight": 20})
+    msp.add_line((12, 20), (-140, 20), dxfattribs={"layer": "KHUNG", "lineweight": 20})
     msp.add_line((-140, 20), (-140, 98), dxfattribs={"layer": "KHUNG", "lineweight": 20})
     
     msp.add_text("I. THÔNG TIN BÁT TỰ & BẢN MỆNH", dxfattribs={"layer": "TIEU_DE", "style": "VN_BOLD", "height": 5.0}).set_placement((-135, 90))
@@ -80,62 +90,52 @@ def draw_van_menh_nguoi_1():
     msp.add_text("- Trị số năng lượng: E = +7 (Dương thịnh)", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 4.0}).set_placement((-135, 34))
     msp.add_text("- Cặp phu thê Tân thiên: KHẢM (Chính Tây)", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 4.0}).set_placement((-135, 26))
 
-    # 3. KHỐI CẤU TRÚC HÀO QUÁI TỐN (GÓC DƯỚI TRÁI: x = -140 đến -55, y = 10 đến -50)
-    msp.add_line((-140, 10), (-55, 10), dxfattribs={"layer": "KHUNG", "lineweight": 20})
-    msp.add_line((-55, 10), (-55, -50), dxfattribs={"layer": "KHUNG", "lineweight": 20})
-    msp.add_line((-55, -50), (-140, -50), dxfattribs={"layer": "KHUNG", "lineweight": 20})
+    # 3. KHỐI CẤU TRÚC HÀO QUÁI TỐN (GÓC DƯỚI TRÁI: x = -140 đến 12, y = 10 đến -50)
+    msp.add_line((-140, 10), (12, 10), dxfattribs={"layer": "KHUNG", "lineweight": 20})
+    msp.add_line((12, 10), (12, -50), dxfattribs={"layer": "KHUNG", "lineweight": 20})
+    msp.add_line((12, -50), (-140, -50), dxfattribs={"layer": "KHUNG", "lineweight": 20})
     msp.add_line((-140, -50), (-140, 10), dxfattribs={"layer": "KHUNG", "lineweight": 20})
     
     msp.add_text("II. CẤU TRÚC 3 HÀO QUÁI TỐN", dxfattribs={"layer": "TIEU_DE", "style": "VN_BOLD", "height": 5.0}).set_placement((-135, 2))
     
     # Hào 3 (Thượng): Dương (+5)
-    msp.add_line((-130, -8), (-95, -8), dxfattribs={"layer": "HAO_DUONG", "lineweight": 45})
-    msp.add_text("Hào 3 (Thượng): Dương (+5) - Hậu vận vững vàng", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.4}).set_placement((-90, -9.5))
+    msp.add_line((-135, -8), (-105, -8), dxfattribs={"layer": "HAO_DUONG", "lineweight": 45})
+    msp.add_text("Hào 3 (Thượng): Dương (+5) - Hậu vận vững vàng", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.4}).set_placement((-100, -9.5))
     
     # Hào 2 (Trung): Dương (+3)
-    msp.add_line((-130, -20), (-95, -20), dxfattribs={"layer": "HAO_DUONG", "lineweight": 45})
-    msp.add_text("Hào 2 (Trung): Dương (+3) - Trung vận thịnh vượng", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.4}).set_placement((-90, -21.5))
+    msp.add_line((-135, -20), (-105, -20), dxfattribs={"layer": "HAO_DUONG", "lineweight": 45})
+    msp.add_text("Hào 2 (Trung): Dương (+3) - Trung vận thịnh vượng", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.4}).set_placement((-100, -21.5))
     
-    # Hào 1 (Sơ): Âm (-1) (hai đoạn đứt)
-    msp.add_line((-130, -32), (-115, -32), dxfattribs={"layer": "HAO_AM", "lineweight": 45})
-    msp.add_line((-110, -32), (-95, -32), dxfattribs={"layer": "HAO_AM", "lineweight": 45})
-    msp.add_text("Hào 1 (Sơ): Âm (-1) - Tiền vận cần tích lũy", dxfattribs={"layer": "HAO_AM", "style": "VN_BOLD", "height": 3.4}).set_placement((-90, -33.5))
+    # Hào 1 (Sơ): Âm (-1) (hai đoạn đứt - MÀU VÀNG)
+    msp.add_line((-135, -32), (-122, -32), dxfattribs={"layer": "HAO_AM", "lineweight": 45})
+    msp.add_line((-118, -32), (-105, -32), dxfattribs={"layer": "HAO_AM", "lineweight": 45})
+    msp.add_text("Hào 1 (Sơ): Âm (-1) - Tiền vận cần tích lũy", dxfattribs={"layer": "HAO_AM", "style": "VN_BOLD", "height": 3.4}).set_placement((-100, -33.5))
     
     msp.add_text("Công thức năng lượng: E = (-1) + (+3) + (+5) = +7", dxfattribs={"layer": "SAN_CAT", "style": "VN_BOLD", "height": 3.8}).set_placement((-135, -44))
 
-    # 4. KHỐI ĐỒ HÌNH BÁT TRẠCH LA BÀN 8 HƯỚNG CỦA QUÁI TỐN (BÊN PHẢI: tâm tại x = 45, y = 25)
-    ox, oy = 45.0, 25.0
-    R_in = 20.0
-    R_mid = 45.0
-    R_out = 65.0
+    # 4. KHỐI ĐỒ HÌNH BÁT TRẠCH LA BÀN 8 HƯỚNG CỦA QUÁI TỐN (BÊN PHẢI: tâm tại x = 76, y = 24)
+    ox, oy = 76.0, 24.0
+    R_in = 18.0
+    R_mid = 36.0
+    R_out = 54.0
     
     msp.add_circle((ox, oy), R_in, dxfattribs={"layer": "NET_CHINH", "lineweight": 25})
     msp.add_circle((ox, oy), R_mid, dxfattribs={"layer": "NET_CHINH", "lineweight": 20})
     msp.add_circle((ox, oy), R_out, dxfattribs={"layer": "KHUNG", "lineweight": 30})
     
     # Nhãn trung tâm
-    msp.add_text("MỆNH TỐN", dxfattribs={"layer": "TIEU_DE", "style": "VN_BOLD", "height": 5.0}).set_placement((ox - 16, oy + 4))
-    msp.add_text("Âm Mộc (E=+7)", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.5}).set_placement((ox - 14, oy - 4))
+    msp.add_text("MỆNH TỐN", dxfattribs={"layer": "TIEU_DE", "style": "VN_BOLD", "height": 4.5}).set_placement((ox, oy + 3.2), align=TextEntityAlignment.MIDDLE_CENTER)
+    msp.add_text("Âm Mộc (E=+7)", dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.0}).set_placement((ox, oy - 3.2), align=TextEntityAlignment.MIDDLE_CENTER)
     
-    # 8 Hướng phân bổ quanh tâm (Chính Bắc ở trên đỉnh - 90 độ)
-    # Tốn gặp các hướng:
-    # 0 deg (Chính Đông): Diên niên (Cát)
-    # 45 deg (Đông Bắc): Tuyệt mệnh (Hung)
-    # 90 deg (Chính Bắc): Sinh khí (Cát nhất)
-    # 135 deg (Tây Bắc): Lục sát (Hung)
-    # 180 deg (Chính Tây): Họa hại (Hung)
-    # 225 deg (Tây Nam): Ngũ quỷ (Hung)
-    # 270 deg (Chính Nam): Thiên y (Cát)
-    # 315 deg (Đông Nam): Phục vị (Cát)
     directions_data = [
         # (angle_deg, phuong_huong, ten_san, is_cat, y_nghia)
-        (90, "CHÍNH BẮC (Khảm)", "SINH KHÍ", True, "Tài lộc, thăng tiến sự nghiệp"),
-        (0, "CHÍNH ĐÔNG (Chấn)", "DIÊN NIÊN", True, "Hòa thuận gia đạo, tình duyên"),
-        (270, "CHÍNH NAM (Li)", "THIÊN Y", True, "Sức khỏe dồi dào, quý nhân"),
+        (90, "BẮC (Khảm)", "SINH KHÍ", True, "Tài lộc, thăng tiến sự nghiệp"),
+        (0, "ĐÔNG (Chấn)", "DIÊN NIÊN", True, "Hòa thuận gia đạo, tình duyên"),
+        (270, "NAM (Li)", "THIÊN Y", True, "Sức khỏe dồi dào, quý nhân"),
         (315, "ĐÔNG NAM (Tốn)", "PHỤC VỊ", True, "Bình an, củng cố nội lực"),
         (45, "ĐÔNG BẮC (Cấn)", "TUYỆT MỆNH", False, "Tổn hại nguyên khí, tai ách"),
         (135, "TÂY BẮC (Đoài)", "LỤC SÁT", False, "Trục trặc tình cảm, thị phi"),
-        (180, "CHÍNH TÂY (Càn)", "HỌA HẠI", False, "Thất bại, tranh chấp nhỏ"),
+        (180, "TÂY (Càn)", "HỌA HẠI", False, "Thất bại, tranh chấp nhỏ"),
         (225, "TÂY NAM (Khôn)", "NGŨ QUỶ", False, "Mất mát, hao tài, hỏa hoạn")
     ]
     
@@ -150,17 +150,17 @@ def draw_van_menh_nguoi_1():
         rad = math.radians(deg)
         layer = "SAN_CAT" if is_cat else "SAN_HUNG"
         
-        # Điểm đặt chữ tên san
-        r_text1 = R_mid - 12.0
-        tx1 = ox + r_text1 * math.cos(rad) - 10
-        ty1 = oy + r_text1 * math.sin(rad) - 1.5
-        msp.add_text(san, dxfattribs={"layer": layer, "style": "VN_BOLD", "height": 3.8}).set_placement((tx1, ty1))
+        # Điểm đặt chữ tên san (vành trong)
+        r_text1 = 27.0
+        tx1 = ox + r_text1 * math.cos(rad)
+        ty1 = oy + r_text1 * math.sin(rad)
+        msp.add_text(san, dxfattribs={"layer": layer, "style": "VN_BOLD", "height": 3.0}).set_placement((tx1, ty1), align=TextEntityAlignment.MIDDLE_CENTER)
         
-        # Điểm đặt hướng
-        r_text2 = R_mid + 8.0
-        tx2 = ox + r_text2 * math.cos(rad) - 14
-        ty2 = oy + r_text2 * math.sin(rad) - 1.5
-        msp.add_text(h_name, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 3.0}).set_placement((tx2, ty2))
+        # Điểm đặt hướng (vành ngoài)
+        r_text2 = 46.0
+        tx2 = ox + r_text2 * math.cos(rad)
+        ty2 = oy + r_text2 * math.sin(rad)
+        msp.add_text(h_name, dxfattribs={"layer": "CHU_THICH", "style": "VN_TEXT", "height": 2.3}).set_placement((tx2, ty2), align=TextEntityAlignment.MIDDLE_CENTER)
 
     # 5. KHỐI TRỤC THỜI GIAN ĐẠI VẬN ĐỜI NGƯỜI (GÓC DƯỚI: x = -140 đến 140, y = -60 đến -118)
     msp.add_line((-140, -56), (140, -56), dxfattribs={"layer": "KHUNG", "lineweight": 20})
